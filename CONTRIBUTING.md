@@ -1,0 +1,3 @@
+## Contribuciones y CLA
+
+Al enviar un Pull Request a este proyecto, aceptas que tu contribución sea licenciada bajo los términos de la licencia AGPLv3 del proyecto. Además, otorgas al mantenedor del proyecto (José Ignacio Peinador Sala) una licencia no exclusiva, perpetua y sin regalías para relicenciar tu contribución bajo términos comerciales como parte del software conjunto. Esto es necesario para mantener la viabilidad del modelo de doble licenciamiento.
