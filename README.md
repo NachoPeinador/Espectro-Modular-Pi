@@ -1,6 +1,6 @@
 # El Espectro Modular de $\pi$: De la Estructura de Canales Primos a las Supercongruencias Elípticas
 
-[![License: AGPL v3 / Commercial](https://img.shields.io/badge/License-AGPL_v3_/_Commercial-007ec6.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-AGPLv3_+_Enterprise-blueviolet.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter)](TEOREMA_DE_REPRESENTACIÓN_MODULAR_DE_π.ipynb)
 **Autor:** José Ignacio Peinador Sala  
