@@ -60,4 +60,4 @@ Todos los resultados presentados en el artículo son reproducibles.
 Para replicar los experimentos de convergencia y validación de fórmulas, ejecute el notebook principal:
 
 ```bash
-jupyter notebook Notebooks/TEOREMA_DE_REPRESENTACIÓN_MODULAR_DE_π.ipynb
+jupyter notebook Notebooks/ESPECTRO_MODULAR_π.ipynb
