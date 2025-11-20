@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{mathptmx}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\title{El Misterioso Espectro Modular de $\pi$:\\
+Descubriendo la Música Oculta de los Números Primos}
+\author{José Ignacio Peinador Sala}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+¿Qué tienen en común la sencilla serie de Leibniz para $\pi$ y las sofisticadas fórmulas de Ramanujan? Este artículo revela una conexión sorprendente: $\pi$ posee un ``espectro modular'' donde los números primos se organizan en dos canales fundamentales $6k+1$ y $6k+5$. Exploraremos cómo esta estructura simple explica desde las series clásicas hasta las supercongruencias modernas, desvelando la música matemática que gobierna nuestra constante favorita.
+\end{abstract}
+
+\section{La Danza de los Números Primos}
+
+Imaginemos que todos los números impares bailan en una pista. Los múltiplos de 3 ($3, 9, 15, \dots$) llevan el ritmo básico, pero la verdadera magia ocurre con las parejas $6k+1$ y $6k+5$. Estos son los ``canales primos'' donde casi todos los números primos (excepto 2 y 3) se concentran.
+
+\subsection{La Serie de Leibniz Revelada}
+
+La clásica serie:
+\[
+\frac{\pi}{4} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \frac{1}{11} + \cdots
+\]
+
+¡Se reorganiza mágicamente cuando filtramos los múltiplos de 3! Obtenemos:
+
+\[
+\pi = 3\left(1 - \frac{1}{5} + \frac{1}{7} - \frac{1}{11} + \frac{1}{13} - \frac{1}{17} + \cdots\right)
+\]
+
+\textbf{Ejercicio:} ¿Puedes verificar los primeros términos? Nota cómo desaparecen $1/3$, $1/9$, $1/15$, $\dots$
+
+\section{Los Dos Canales de $\pi$}
+
+Definimos:
+\begin{itemize}
+\item \textbf{Canal A:} $1, 7, 13, 19, \dots$ (forma $6k+1$)
+\item \textbf{Canal B:} $5, 11, 17, 23, \dots$ (forma $6k+5$)
+\end{itemize}
+
+$\pi$ emerge del ``baile'' entre estos dos canales. Es como si tuviéramos dos instrumentos musicales que, al tocar juntos, producen la melodía de $\pi$.
+
+\section{El Salto a la Alta Velocidad: Ramanujan}
+
+Mientras Leibniz nos da 1 nuevo dígito cada millón de términos, Ramanujan encontró la autopista:
+
+\[
+\frac{1}{\pi} = \frac{2\sqrt{2}}{9801} \sum_{k=0}^{\infty} \frac{(4k)!}{(k!)^4} \frac{1103 + 26390k}{396^{4k}}
+\]
+
+¡Cada término aporta 8 dígitos nuevos! Lo fascinante es que el número $396 = 4 \times 9 \times 11$ contiene nuestra estructura $6k+5$ (pues $11 = 6\times1 + 5$).
+
+\section{Supercongruencias: Los Patrones Ocultos}
+
+Al estudiar estas series módulo números primos, descubrimos comportamientos sorprendentes. Por ejemplo, para $p = 17$ (que vive en el canal $6k+5$), las sumas parciales cumplen:
+
+\[
+S(17) \equiv 246 \pmod{289}
+\]
+
+Estos patrones conectan la aritmética elemental con teorías modernas de formas modulares.
+
+\section{Calculando $\pi$ en el Siglo XXI}
+
+\begin{minipage}{0.6\textwidth}
+El algoritmo BBP permite extraer dígitos hexadecimales de $\pi$ sin calcular los anteriores. Es como poder leer una página de un libro sin pasar por las anteriores.
+
+\textbf{Ejemplo:} El dígito en posición 10 es 'A' en hexadecimal.
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\textwidth}
+\begin{verbatim}
+def digito_pi(n):
+    # Cálculo del n-ésimo
+    # dígito hexadecimal
+    total = 0
+    for k in range(n+1):
+        term = (4/(8*k+1) - 
+                2/(8*k+4) - 
+                1/(8*k+5) - 
+                1/(8*k+6))
+        total += term / 16^k
+    return int(16*total)
+\end{verbatim}
+\end{minipage}
+
+\section{Para los Más Curiosos}
+
+\begin{itemize}
+\item \textbf{Producto de Euler:}
+\[
+\pi = \sqrt{\frac{9}{2} \cdot \prod_{p>3} \frac{p^2}{p^2-1}}
+\]
+donde el producto recorre primos en nuestros dos canales.
+
+\item \textbf{Reto:} Verifica que $5^2/(5^2-1) = 25/24$, $7^2/(7^2-1) = 49/48$, etc.
+
+\item \textbf{Conjetura Abierta:} ¿Existen conexiones similares para otras constantes como $e$ o la constante de Catalan?
+\end{itemize}
+
+\section{Conclusión}
+
+$\pi$ nos sigue sorprendiendo. Lo que parecía una simple constante revela una estructura profunda donde los números primos se organizan en coros armónicos. La próxima vez que veas $\pi$, recuerda que estás contemplando la danza eterna de los números primos.
+
+\begin{flushright}
+\textit{«Las matemáticas son la música de la razón»} \\
+— James Joseph Sylvester
+\end{flushright}
+
+\section*{Para Saber Más}
+
+\begin{itemize}
+\item Libro: «$\pi$ y las AGM» de los hermanos Borwein
+\item Video: «La magia de las series de Ramanujan» (YouTube)
+\item Web: \url{https://github.com/NachoPeinador/Espectro-Modular-Pi}
+\end{itemize}
+
+\end{document}

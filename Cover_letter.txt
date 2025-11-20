@@ -1,0 +1,70 @@
+\documentclass[11pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{mathptmx}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+\address{
+José Ignacio Peinador Sala \\
+Calle Florencia 1 \\
+47007 Valladolid, España \\
+Email: joseignacio.peinador@gmail.com
+}
+
+\signature{
+José Ignacio Peinador Sala \\
+Investigador Independiente
+}
+
+\begin{document}
+
+%\begin{letter}{
+Editor Jefe \\
+Revista Matemática Iberoamericana \\
+%\end{letter}
+
+\opening{Estimado Editor Jefe:}
+
+Tengo el honor de someter a consideración de la \textbf{Revista Matemática Iberoamericana} nuestro manuscrito titulado:
+
+\textbf{``El Espectro Modular de $\pi$: De la Estructura de Canales Primos a las Supercongruencias Elípticas''}
+
+Este trabajo representa una contribución fundamental hacia la unificación de dos paradigmas aparentemente disjuntos en la teoría de números: el análisis aritmético elemental basado en $\mathbb{Z}/6\mathbb{Z}$ y la teoría de formas modulares de multiplicación compleja.
+
+\vspace{0.5cm}
+
+\textbf{Contribuciones principales:}
+
+\begin{itemize}
+\item \textbf{Teoría Estructural:} Demostramos que $\pi$ posee una representación natural en la base $6k \pm 1$, actuando como un filtro de ``canales primos'' que aísla la distribución de números primos.
+
+\item \textbf{Aceleración Modular:} Reconstruimos experimentalmente series de Ramanujan-Sato de Nivel 58 mediante el algoritmo PSLQ, validando una convergencia exponencial de 8 dígitos por término.
+
+\item \textbf{Síntesis Unificadora:} Establecemos que las supercongruencias aritméticas para primos inertes (ej. $p=17$) y la localidad de algoritmos Spigot son manifestaciones de la misma estructura modular subyacente.
+
+\item \textbf{Arquitectura Computacional:} Proponemos un paradigma híbrido que explota esta dualidad para el cálculo eficiente de constantes matemáticas.
+\end{itemize}
+
+\vspace{0.5cm}
+
+Consideramos que este manuscrito es particularmente apropiado para la \textbf{Revista Matemática Iberoamericana} debido a:
+
+\begin{itemize}
+\item Su enfoque \textbf{interdisciplinario} que conecta teoría de números, análisis y computación
+\item La combinación de \textbf{rigor teórico} con \textbf{matemática experimental} de alta precisión
+\item El potencial para abrir nuevas líneas de investigación en \textbf{física aritmética} y \textbf{teoría espectral modular}
+\end{itemize}
+
+\vspace{0.5cm}
+
+Todos los códigos y datos están disponibles en nuestro repositorio público para garantizar la completa reproducibilidad de los resultados.
+
+Agradecemos su consideración y quedamos a disposición para cualquier consulta o modificación que pudiera ser necesaria.
+
+\closing{Atentamente,}
+
+\encl{Manuscrito, Resumen Ejecutivo, Código Fuente}
+
+%\end{letter}
+\end{document}

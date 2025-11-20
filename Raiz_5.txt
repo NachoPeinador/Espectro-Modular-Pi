@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{mathptmx}
+\usepackage[margin=1in]{geometry}
+
+\title{Propuesta para Raíz de 5: El Espectro Musical de $\pi$}
+\author{José Ignacio Peinador Sala}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Título Sugerido para el Programa}
+
+\textbf{«La Música Oculta de $\pi$: Descubriendo los Dos Canales de los Números Primos»}
+
+\section*{Duración}
+15-20 minutos
+
+\section*{Puntos Clave para la Entrevista}
+
+\subsection*{1. La Idea Principal (2-3 minutos)}
+\begin{itemize}
+\item $\pi$ tiene una \textbf{estructura dual} oculta: se descompone en dos ``canales'' de números primos
+\item \textbf{Canal 6k+1}: 1, 7, 13, 19, 25... 
+\item \textbf{Canal 6k+5}: 5, 11, 17, 23, 29...
+\item Casi todos los primos (excepto 2 y 3) viven en estos dos canales
+\end{itemize}
+
+\subsection*{2. El Experimento Visual (3-4 minutos)}
+\begin{itemize}
+\item \textbf{Series de Leibniz transformada:}
+\[
+\pi = 3\left(1 - \frac{1}{5} + \frac{1}{7} - \frac{1}{11} + \frac{1}{13} - \frac{1}{17} + \cdots\right)
+\]
+\item \textbf{Demostración visual:} Mostrar cómo desaparecen los múltiplos de 3
+\item \textbf{Analogía musical:} Dos instrumentos tocando juntos para crear la melodía de $\pi$
+\end{itemize}
+
+\subsection*{3. Conexión con Ramanujan (3-4 minutos)}
+\begin{itemize}
+\item Las fórmulas rápidas de Ramanujan también siguen este patrón
+\item \textbf{Ejemplo:} En la famosa serie, el número 396 = 4×9×11 contiene el primo 11 (que es 6×1+5)
+\item \textbf{Curiosidad:} Cada término da 8 dígitos de $\pi$ vs 1 dígito cada millón de términos de Leibniz
+\end{itemize}
+
+\subsection*{4. Aplicaciones Sorprendentes (3-4 minutos)}
+\begin{itemize}
+\item \textbf{Algoritmo BBP:} Calcular cualquier dígito de $\pi$ sin los anteriores
+\item \textbf{Supercongruencias:} Patrones ocultos módulo números primos
+\item \textbf{Ejemplo concreto:} El primo 17 siempre da residuo 246 módulo 289
+\end{itemize}
+
+\subsection*{5. Mensaje Final (2-3 minutos)}
+\begin{itemize}
+\item $\pi$ no es un número cualquiera: tiene \textbf{estructura interna}
+\item Los números primos siguen \textbf{patrones armónicos}
+\item Las matemáticas siguen escondiendo \textbf{belleza inesperada}
+\item \textbf{Invitación a la audiencia:} ¿Podrán encontrar patrones similares en otras constantes?
+\end{itemize}
+
+\section*{Frases Impactantes para el Programa}
+
+\begin{quote}
+«$\pi$ no es un monólogo matemático, es un diálogo entre dos coros de números primos»
+\end{quote}
+
+\begin{quote}
+«Descubrimos que $\pi$ tiene el equivalente matemático del estereo: canal izquierdo y canal derecho de números primos»
+\end{quote}
+
+\begin{quote}
+«Lo que Ramanujan intuyó genialmente, ahora podemos entenderlo estructuralmente»
+\end{quote}
+
+\section*{Material Visual Sugerido}
+
+\begin{itemize}
+\item \textbf{Animación:} Dos streams de números convergiendo a $\pi$
+\item \textbf{Gráfico:} Comparación convergencia Leibniz vs Ramanujan
+\item \textbf{Ejemplo interactivo:} Cálculo de dígitos hexadecimales con BBP
+\item \textbf{Infografía:} Los dos canales de números primos
+\end{itemize}
+
+\section*{Para los Oyentes Más Técnicos}
+
+\begin{itemize}
+\item \textbf{Repositorio abierto:} \url{https://github.com/NachoPeinador/Espectro-Modular-Pi}
+\item \textbf{Algoritmos implementados:} PSLQ, BBP, análisis de supercongruencias
+\item \textbf{Retos abiertos:} Extensión a otras constantes matemáticas
+\end{itemize}
+
+\section*{Contacto}
+
+José Ignacio Peinador Sala \\
+Investigador Independiente \\
+joseignacio.peinador@gmail.com \\
+Disponible para entrevista presencial o virtual
+
+\end{document}

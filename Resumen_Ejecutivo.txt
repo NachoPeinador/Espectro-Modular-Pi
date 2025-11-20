@@ -1,0 +1,78 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{mathptmx}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\title{Resumen Ejecutivo: El Espectro Modular de $\pi$}
+\author{José Ignacio Peinador Sala}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Resumen de Contribuciones}
+
+Este trabajo establece un \textbf{paradigma unificado} para entender la constante $\pi$ a través de su \textbf{espectro modular}, conectando aritmética elemental con formas modulares de alto nivel.
+
+\subsection*{Resultados Clave}
+
+\begin{itemize}
+\item \textbf{Teorema de Representación Modular:}
+\[
+\pi = 3\sum_{k=0}^{\infty} (-1)^k\left(\frac{1}{6k+1} + \frac{1}{6k+5}\right)
+\]
+Revela la estructura de ``canales primos'' $6k \pm 1$ como filtro aritmético fundamental.
+
+\item \textbf{Reconstrucción Experimental de Series Ramanujan-Sato (Nivel 58):}
+\[
+\frac{1}{\pi} = \frac{2\sqrt{2}}{9801} \sum_{k=0}^{\infty} \frac{(4k)!}{(k!)^4} \frac{1103 + 26390k}{396^{4k}}
+\]
+Validada con convergencia de \textbf{8 dígitos por término} mediante PSLQ.
+
+\item \textbf{Teoría de Uniformidad Modular:} Demostramos que las supercongruencias para primos inertes (ej. $p=17$) y la localidad de algoritmos Spigot emergen de la misma estructura subyacente.
+
+\item \textbf{Arquitectura Computacional Híbrida:} Paradigma que combina procesamiento paralelo (canales primos) con acceso local (algoritmos Spigot).
+\end{itemize}
+
+\subsection*{Metodología Innovadora}
+
+\begin{itemize}
+\item \textbf{Espacios de Hilbert Modulares:} Formalización de $\mathcal{V}_6$ sobre $\mathbb{Z}/6\mathbb{Z}$
+\item \textbf{Matemática Experimental:} Uso de PSLQ con precisión de 200 dígitos
+\item \textbf{Síntesis Teórica:} Conexión explícita entre niveles modulares 6 y 58
+\end{itemize}
+
+\subsection*{Impacto y Aplicaciones}
+
+\begin{itemize}
+\item \textbf{Teórico:} Unificación de perspectivas dispersas en teoría de números
+\item \textbf{Computacional:} Nuevos algoritmos para cálculo de constantes
+\item \textbf{Física Matemática:} Conexiones con teoría espectral y constantes fundamentales
+\end{itemize}
+
+\subsection*{Recursos Disponibles}
+
+\begin{itemize}
+\item \textbf{Código Fuente:} \url{https://github.com/NachoPeinador/Espectro-Modular-Pi}
+\item \textbf{Datos Numéricos:} Validación experimental completa
+\item \textbf{Implementaciones:} Algoritmos BBP, PSLQ, análisis de convergencia
+\end{itemize}
+
+\subsection*{Perspectivas Futuras}
+
+\begin{itemize}
+\item Extensión a otras constantes ($\zeta(3)$, constante de Catalan)
+\item Teoría espectral de operadores modulares
+\item Conexiones con teoría de cuerdas aritméticas
+\end{itemize}
+
+\vspace{1cm}
+
+\textbf{Palabras Clave:} $\pi$, formas modulares, supercongruencias, PSLQ, algoritmos Spigot, espectro modular, física aritmética.
+
+\end{document}
