@@ -61,3 +61,39 @@ Para replicar los experimentos de convergencia y validación de fórmulas, ejecu
 
 ```bash
 jupyter notebook Notebooks/ESPECTRO_MODULAR_π.ipynb
+
+---
+
+## 🔬 Ciencia Independiente y Abierta
+
+Este trabajo se realizó de manera completamente independiente, sin financiación institucional ni corporativa, demostrando que la investigación de frontera puede surgir también desde entornos abiertos y accesibles.
+
+[![Sponsor @NachoPeinador](https://img.shields.io/badge/Sponsor-%E2%9D%A4-%23db61a2.svg)](https://github.com/sponsors/NachoPeinador)
+
+---
+
+## 🚀 Apoya y Difunde esta Investigación
+
+Como investigador independiente, la visibilidad de este trabajo depende en gran medida del apoyo de la comunidad científica y de entusiastas como tú. Si este proyecto te ha resultado interesante o útil, aquí tienes algunas formas muy concretas en las que puedes ayudar a darle visibilidad:
+
+* **⭐️ Dale una Estrella en GitHub:** Si te gusta el repositorio, haz clic en el botón **"Star"** en la parte superior de la página. Es un indicador de calidad clave que ayuda a que otros descubran el proyecto.
+
+* **🔄 Comparte en Redes Sociales:** Publica el enlace al preprint de Research Square o a este repositorio en **Twitter (X)**, **LinkedIn** o tu red académica preferida. Un simple post puede tener un impacto enorme. No dudes en mencionarme `@todos_lumpen`.
+
+* **✍️ Cita el Trabajo:** La forma más importante y duradera de apoyo en la ciencia es la citación. Si mi artículo, código o metodología inspira o es útil para tu propia investigación, por favor, considera citarlo.
+
+* **💬 Inicia una Discusión:** Si tienes preguntas, ideas para futuras investigaciones o críticas constructivas, no dudes en abrir un **"Issue"** aquí en el repositorio. ¡Me encantaría conocer tu opinión y debatir sobre los resultados!
+
+¡Gracias por tu apoyo para hacer visible la ciencia independiente!
+
+---
+
+## ✍️ Citación
+
+```bibtex
+José Ignacio Peinador Sala. The Topological Reinforcement Operator (TRO): A Parsimony Principle for Memory Consolidation in Complex Networks, 09 October 2025, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-7808963/v1]
+
+
+
+
+
