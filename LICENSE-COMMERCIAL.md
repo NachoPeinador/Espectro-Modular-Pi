@@ -1,6 +1,6 @@
 # Términos de Licencia Comercial
 
-El **Operador de Refuerzo Topológico (ORT)** está disponible bajo una licencia comercial para entidades que deseen integrar este software en productos propietarios o flujos de trabajo corporativos cerrados.
+El **software desarrollado por el autor y alojado en este repositorio** está disponible bajo una licencia comercial para entidades que deseen integrarlo en productos propietarios o flujos de trabajo corporativos cerrados.
 
 ## Beneficios de la Licencia Comercial
 Al adquirir una licencia comercial, usted obtiene el derecho a:
@@ -18,4 +18,5 @@ Las licencias se negocian caso por caso dependiendo del tamaño de la organizaci
 
 Para solicitar una cotización o un acuerdo de evaluación, por favor contacte a:
 **José Ignacio Peinador Sala**
+
 📧 [joseignacio.peinador@gmail.com](mailto:joseignacio.peinador@gmail.com)
