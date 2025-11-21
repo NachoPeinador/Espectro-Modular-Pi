@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/License-AGPLv3_+_Enterprise-blueviolet.svg)](LICENSE-AGPL.md)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter)](TEOREMA_DE_REPRESENTACIÓN_MODULAR_DE_π.ipynb)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 [![Sponsor @NachoPeinador](https://img.shields.io/badge/Sponsor-%E2%9D%A4-%23db61a2.svg)](https://github.com/sponsors/NachoPeinador)
 
 **Autor:** José Ignacio Peinador Sala  
