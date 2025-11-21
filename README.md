@@ -58,6 +58,7 @@ Todos los resultados presentados en el artículo son reproducibles.
 
 ### Ejecución Rápida
 Para replicar los experimentos de convergencia y validación de fórmulas, ejecute el notebook principal:
+[Abrir Notebook](Notebooks/TEOREMA_DE_REPRESENTACIÓN_MODULAR_DE_π.ipynb)
 
 ---
 
