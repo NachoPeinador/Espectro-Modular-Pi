@@ -75,4 +75,5 @@ Validada con convergencia de \textbf{8 dígitos por término} mediante PSLQ.
 
 \textbf{Palabras Clave:} $\pi$, formas modulares, supercongruencias, PSLQ, algoritmos Spigot, espectro modular, física aritmética.
 
+
 \end{document}
