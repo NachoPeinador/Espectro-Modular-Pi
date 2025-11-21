@@ -25,13 +25,11 @@ Este trabajo propone una unificación inédita entre el análisis clásico y la 
 ## 📂 Estructura del Repositorio
 
 * **`Paper/`**: Contiene el manuscrito científico en formato PDF y los archivos fuente LaTeX.
-    * `main_v2.tex`: Archivo principal del artículo.
+    * `ESPECTRO_MODULAR_π.tex`: Archivo principal del artículo.
 * **`Notebooks/`**: Notebooks de Jupyter/Colab con la validación computacional.
     * `TEOREMA_DE_REPRESENTACIÓN_MODULAR_DE_π.ipynb`: El "núcleo" experimental. Incluye la derivación de la serie modular, las pruebas de convergencia y la validación de la fórmula de Euler.
-* **`Code/`**: Implementaciones puras en Python de los algoritmos clave.
-    * `modular_pi.py`: Calculadora de la serie $6k \pm 1$.
-    * `spigot_bbp.py`: Implementación del algoritmo de extracción hexadecimal.
-
+* **`Docs/`**: Documentos para la divulgación científica de los hallazgos.
+    
 ---
 
 ## 🚀 Principales Hallazgos
@@ -64,8 +62,8 @@ Para replicar los experimentos de convergencia y validación de fórmulas, ejecu
 
 ## 🔬 Ciencia Independiente y Abierta
 
-Este trabajo se realizó de manera completamente independiente, sin financiación institucional ni corporativa, demostrando que la investigación de frontera puede surgir también desde entornos abiertos y accesibles.
-
+Este trabajo se realizó de manera completamente independiente, sin financiación institucional ni corporativa, con herramientas abiertas y accesibles.
+> *"En cuestiones de ciencia, la autoridad de mil no vale lo que el humilde razonamiento de un solo individuo."* > — **Galileo Galilei**
 
 
 ---
@@ -76,7 +74,7 @@ Como investigador independiente, la visibilidad de este trabajo depende en gran 
 
 * **⭐️ Dale una Estrella en GitHub:** Si te gusta el repositorio, haz clic en el botón **"Star"** en la parte superior de la página. Es un indicador de calidad clave que ayuda a que otros descubran el proyecto.
 
-* **🔄 Comparte en Redes Sociales:** Publica el enlace al preprint de Research Square o a este repositorio en **Twitter (X)**, **LinkedIn** o tu red académica preferida. Un simple post puede tener un impacto enorme. No dudes en mencionarme `@todos_lumpen`.
+* **🔄 Comparte en Redes Sociales:** Publica el enlace a Zenodo o a este repositorio en **Twitter (X)**, **LinkedIn** o tu red académica preferida. Un simple post puede tener un impacto enorme. No dudes en mencionarme `@todos_lumpen`.
 
 * **✍️ Cita el Trabajo:** La forma más importante y duradera de apoyo en la ciencia es la citación. Si mi artículo, código o metodología inspira o es útil para tu propia investigación, por favor, considera citarlo.
 
