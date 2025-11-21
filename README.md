@@ -63,21 +63,6 @@ Para replicar los experimentos de convergencia y validación de fórmulas, ejecu
 
 ---
 
-## 🔬 Ciencia Independiente y Abierta
-> *"En cuestiones de ciencia, la autoridad de mil no vale lo que el humilde razonamiento de un solo individuo."* > — **Galileo Galilei**
-
-Este trabajo se realizó de manera completamente independiente, sin financiación institucional ni corporativa, con herramientas abiertas y accesibles.
-
----
-
-## ✍️ Citación
-
-```bibtex
-
-```
-
----
-
 ## 🚀 Apoya y Difunde esta Investigación
 
 Como investigador independiente, la visibilidad de este trabajo depende en gran medida del apoyo de la comunidad científica y de entusiastas como tú. Si este proyecto te ha resultado interesante o útil, aquí tienes algunas formas muy concretas en las que puedes ayudar a darle visibilidad:
@@ -91,3 +76,18 @@ Como investigador independiente, la visibilidad de este trabajo depende en gran 
 * **💬 Inicia una Discusión:** Si tienes preguntas, ideas para futuras investigaciones o críticas constructivas, no dudes en abrir un **"Issue"** aquí en el repositorio. ¡Me encantaría conocer tu opinión y debatir sobre los resultados!
 
 ¡Gracias por tu apoyo para hacer visible la ciencia independiente!
+
+---
+
+## ✍️ Citación
+
+```bibtex
+
+```
+
+---
+
+## 🔬 Ciencia Independiente y Abierta
+> *"En cuestiones de ciencia, la autoridad de mil no vale lo que el humilde razonamiento de un solo individuo."* > — **Galileo Galilei**
+
+Este trabajo se realizó de manera completamente independiente, sin financiación institucional ni corporativa, con herramientas abiertas y accesibles.
