@@ -61,10 +61,9 @@ Para replicar los experimentos de convergencia y validación de fórmulas, ejecu
 ---
 
 ## 🔬 Ciencia Independiente y Abierta
-
-Este trabajo se realizó de manera completamente independiente, sin financiación institucional ni corporativa, con herramientas abiertas y accesibles.
 > *"En cuestiones de ciencia, la autoridad de mil no vale lo que el humilde razonamiento de un solo individuo."* > — **Galileo Galilei**
 
+Este trabajo se realizó de manera completamente independiente, sin financiación institucional ni corporativa, con herramientas abiertas y accesibles.
 
 ---
 
