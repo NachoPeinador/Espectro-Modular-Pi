@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-AGPLv3_+_Enterprise-blueviolet.svg)](LICENSE-AGPL.md)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter)](TEOREMA_DE_REPRESENTACIÓN_MODULAR_DE_π.ipynb)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+
 [![Sponsor @NachoPeinador](https://img.shields.io/badge/Sponsor-%E2%9D%A4-%23db61a2.svg)](https://github.com/sponsors/NachoPeinador)
 
 **Autor:** José Ignacio Peinador Sala  
@@ -70,6 +70,14 @@ Este trabajo se realizó de manera completamente independiente, sin financiació
 
 ---
 
+## ✍️ Citación
+
+```bibtex
+
+```
+
+---
+
 ## 🚀 Apoya y Difunde esta Investigación
 
 Como investigador independiente, la visibilidad de este trabajo depende en gran medida del apoyo de la comunidad científica y de entusiastas como tú. Si este proyecto te ha resultado interesante o útil, aquí tienes algunas formas muy concretas en las que puedes ayudar a darle visibilidad:
@@ -83,15 +91,3 @@ Como investigador independiente, la visibilidad de este trabajo depende en gran 
 * **💬 Inicia una Discusión:** Si tienes preguntas, ideas para futuras investigaciones o críticas constructivas, no dudes en abrir un **"Issue"** aquí en el repositorio. ¡Me encantaría conocer tu opinión y debatir sobre los resultados!
 
 ¡Gracias por tu apoyo para hacer visible la ciencia independiente!
-
----
-
-## ✍️ Citación
-
-```bibtex
-José Ignacio Peinador Sala. The Topological Reinforcement Operator (TRO): A Parsimony Principle for Memory Consolidation in Complex Networks, 09 October 2025, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-7808963/v1]
-
-
-
-
-
