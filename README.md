@@ -58,6 +58,7 @@ Todos los resultados presentados en el artículo son reproducibles.
 
 ### Ejecución Rápida
 Para replicar los experimentos de convergencia y validación de fórmulas, ejecute el notebook principal:
+
 [Abrir Notebook](Notebooks/ESPECTRO_MODULAR_π.ipynb)
 
 ---
