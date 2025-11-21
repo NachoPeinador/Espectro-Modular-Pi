@@ -28,7 +28,7 @@ Este trabajo propone una unificación inédita entre el análisis clásico y la 
 * **`Paper/`**: Contiene el manuscrito científico en formato PDF y los archivos fuente LaTeX.
     * `ESPECTRO_MODULAR_π.tex`: Archivo principal del artículo.
 * **`Notebooks/`**: Notebooks de Jupyter/Colab con la validación computacional.
-    * `TEOREMA_DE_REPRESENTACIÓN_MODULAR_DE_π.ipynb`: El "núcleo" experimental. Incluye la derivación de la serie modular, las pruebas de convergencia y la validación de la fórmula de Euler.
+    * `ESPECTRO_MODULAR_π.ipynb`: El "núcleo" experimental. Incluye la derivación de la serie modular, las pruebas de convergencia y la validación de la fórmula de Euler.
 * **`Docs/`**: Documentos para la divulgación científica de los hallazgos.
     
 ---
@@ -58,7 +58,7 @@ Todos los resultados presentados en el artículo son reproducibles.
 
 ### Ejecución Rápida
 Para replicar los experimentos de convergencia y validación de fórmulas, ejecute el notebook principal:
-[Abrir Notebook](Notebooks/TEOREMA_DE_REPRESENTACIÓN_MODULAR_DE_π.ipynb)
+[Abrir Notebook](Notebooks/ESPECTRO_MODULAR_π.ipynb)
 
 ---
 
