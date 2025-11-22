@@ -88,4 +88,4 @@ Como investigador independiente, la visibilidad de este trabajo depende en gran 
 ## 🔬 Ciencia Independiente y Abierta
 > *"En cuestiones de ciencia, la autoridad de mil no vale lo que el humilde razonamiento de un solo individuo."* > — **Galileo Galilei**
 
-Este trabajo se realizó de manera completamente independiente, sin financiación institucional ni corporativa, con herramientas abiertas y accesibles.
+Este trabajo se realizó de manera completamente independiente, sin financiación institucional ni corporativa, gracias a personas que trabajan apasionadamente por el bien común.
