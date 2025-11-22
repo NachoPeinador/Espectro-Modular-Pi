@@ -3,6 +3,8 @@
 [![License](https://img.shields.io/badge/License-AGPLv3_+_Enterprise-blueviolet.svg)](LICENSE-AGPL.md)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter)](TEOREMA_DE_REPRESENTACIÓN_MODULAR_DE_π.ipynb)
+[![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.16578454-blue)](https://doi.org/10.5281/zenodo.17680024)
+
 
 **Autor:** José Ignacio Peinador Sala  
 **Contacto:** [joseignacio.peinador@gmail.com](mailto:joseignacio.peinador@gmail.com)  
@@ -80,7 +82,7 @@ Como investigador independiente, la visibilidad de este trabajo depende en gran 
 ## ✍️ Citación
 
 ```bibtex
-
+Peinador Sala, J. I. (2025). The Modular Spectrum of π: From Prime Channel Structure to Elliptic Supercongruences (Versión 1). Zenodo. https://doi.org/10.5281/zenodo.17680024
 ```
 
 ---
