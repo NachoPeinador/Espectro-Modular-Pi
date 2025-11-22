@@ -4,8 +4,6 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter)](TEOREMA_DE_REPRESENTACIÓN_MODULAR_DE_π.ipynb)
 
-[![Sponsor @NachoPeinador](https://img.shields.io/badge/Sponsor-%E2%9D%A4-%23db61a2.svg)](https://github.com/sponsors/NachoPeinador)
-
 **Autor:** José Ignacio Peinador Sala  
 **Contacto:** [joseignacio.peinador@gmail.com](mailto:joseignacio.peinador@gmail.com)  
 **ORCID:** [0009-0008-1822-3452](https://orcid.org/0009-0008-1822-3452)
