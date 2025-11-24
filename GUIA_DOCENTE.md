@@ -7,6 +7,8 @@ Esta guía acompaña a los 5 cuadernos interactivos del proyecto. El objetivo pe
 
 > **Referencia:** Peinador Sala, J. I. (2025). *The Modular Spectrum of π*. Zenodo.
 
+📄 **Descargar Guía Docente en PDF (para impresión)**](https://github.com/NachoPeinador/Espectro-Modular-Pi/blob/main/Docs/Guia_Docente.pdf)
+
 ---
 
 ### 2. Desglose por Sesiones
