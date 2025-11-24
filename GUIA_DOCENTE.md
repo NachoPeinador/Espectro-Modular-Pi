@@ -17,22 +17,22 @@ Esta guía acompaña a los 5 cuadernos interactivos del proyecto. El objetivo pe
 * **❓ Duda Frecuente:** *"¿Por qué el 25 está en la lista si no es primo?"*
     * **Respuesta:** En la suma modular, filtramos números coprimos con 6 (no pares, no múltiplos de 3). El 25 cumple esto. En el producto de Euler (Sesión 2) seremos más estrictos.
 
-#### 🔗 Sesión 2: Conexiones Profundas [Abrir cuaderno](Notebooks/El_Universo_Conectado_de_π_Probabilidad,_Complejos_y_Misterios.ipynb)
+#### 🔗 Sesión 2: Conexiones Profundas [Abrir cuaderno](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/El_Universo_Conectado_de_π_Probabilidad,_Complejos_y_Misterios.ipynb)
 * **Foco:** La omnipresencia de $\pi$.
 * **⭐ Actividad Estrella:** Calcular el área de la Campana de Gauss (Estadística) usando una serie de fracciones simples. Es un momento de conexión interdisciplinar muy potente.
 * **💬 Debate:** Comparar la fórmula modular (lenta pero comprensible) con la de Ramanujan (rápida pero oscura). Discutir *"Eficiencia vs. Explicabilidad"*.
 
-#### 🌍 Sesión 3: Aplicación y Geometría [Abrir cuaderno](Notebooks/π_en_Acción_Geometría,_Dimensiones_y_lo_Imposible.ipynb)
+#### 🌍 Sesión 3: Aplicación y Geometría [Abrir cuaderno](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/π_en_Acción_Geometría,_Dimensiones_y_lo_Imposible.ipynb)
 * **Foco:** La propagación del error.
 * **Analogía:** **"Perder el Mar Mediterráneo"**. Al calcular el volumen de la Tierra ($r^3$), un error decimal en $\pi$ se magnifica cúbicamente.
 * **Monte Carlo:** Demostración visual de que el azar (fuerza bruta) es computacionalmente ineficiente comparado con una estructura matemática ordenada.
 
-#### ⚙️ Sesión 4: Ingeniería y Algoritmos [Abrir cuaderno](Notebooks/Las_Herramientas_del_Infinito.ipynb)
+#### ⚙️ Sesión 4: Ingeniería y Algoritmos [Abrir cuaderno](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/Las_Herramientas_del_Infinito.ipynb)
 * **Foco:** Utilidad práctica.
 * **🔐 Criptografía:** El "Benchmark de Primos" demuestra que saltarse los canales modulares inútiles (0, 2, 3, 4) acelera la búsqueda de números primos en un **~33%**. Esto es vital en seguridad informática.
 * **Problema de Basilea:** Resolución numérica de $\sum 1/n^2 = \pi^2/6$ usando el cuadrado de la serie modular.
 
-#### 🧬 Sesión 5: Teoría Abstracta [Abrir cuaderno](Notebooks/El_Código_Fuente_de_las_Matemáticas.ipynb)
+#### 🧬 Sesión 5: Teoría Abstracta [Abrir cuaderno](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/El_Código_Fuente_de_las_Matemáticas.ipynb)
 * **Foco:** Cambio de Paradigma.
 * **🌻 Fibonacci:** Descubrimiento del ciclo de 24 pasos (**Periodo de Pisano**) en la naturaleza.
 * **Matriz Modular:** Visualización de las "interacciones fuertes" (cruces de canales primos) en matrices, sugiriendo estructuras ocultas en el álgebra lineal.
