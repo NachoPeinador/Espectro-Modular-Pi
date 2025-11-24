@@ -48,6 +48,28 @@ Implementamos algoritmos Spigot que demuestran la propiedad de "localidad" de $\
 
 ---
 
+## 🎓 Material Educativo y Divulgación
+
+Este proyecto incluye una Suite Educativa completa diseñada para trasladar estos hallazgos de la frontera de la investigación a las aulas de Bachillerato y Universidad.
+
+Hemos desarrollado 5 talleres interactivos (Jupyter/Colab) que permiten a los estudiantes redescubrir $\pi$ desde cero:
+
+Módulo 1: Aritmética Modular y Patrones Ocultos.
+
+Módulo 2: Conexiones con Estadística y Álgebra.
+
+Módulo 3: Simulación, Geometría y el "Efecto Mariposa".
+
+Módulo 4: Ingeniería y Algoritmos Computacionales.
+
+Módulo 5: Teoría Profunda (Sucesiones y Matrices).
+
+## 👉 Acceder al Espacio Educativo y Guía Docente
+[Abrir Guía](GUIA_DOCENTE.md)
+
+---
+
+
 ## 💻 Reproducibilidad
 
 Todos los resultados presentados en el artículo son reproducibles.
