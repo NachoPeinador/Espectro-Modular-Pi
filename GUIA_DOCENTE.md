@@ -11,7 +11,7 @@ Esta guía acompaña a los 5 cuadernos interactivos del proyecto. El objetivo pe
 
 ### 2. Desglose por Sesiones
 
-#### 📘 Sesión 1: Aritmética y Patrones [Abrir cuaderno](Notebooks/Desbloqueando_los_Secretos_de_π.ipynb)
+#### 📘 Sesión 1: Aritmética y Patrones [Abrir cuaderno](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/Desbloqueando_los_Secretos_de_π.ipynb)
 * **Foco:** Entender que no todos los algoritmos son iguales.
 * **Punto Clave:** El **"Reloj Modular"**. Los alumnos deben visualizar que los números primos (y los términos útiles de $\pi$) solo existen en los canales $1$ y $5$ del módulo $6$.
 * **❓ Duda Frecuente:** *"¿Por qué el 25 está en la lista si no es primo?"*
