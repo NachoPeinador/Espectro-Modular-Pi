@@ -64,8 +64,7 @@ Módulo 4: Ingeniería y Algoritmos Computacionales.
 
 Módulo 5: Teoría Profunda (Sucesiones y Matrices).
 
-## 👉 Acceder al Espacio Educativo y Guía Docente
-[Abrir Guía](GUIA_DOCENTE.md)
+## [👉 Acceder al Espacio Educativo y Guía Docente](GUIA_DOCENTE.md)
 
 ---
 
