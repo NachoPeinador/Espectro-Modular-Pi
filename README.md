@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-AGPLv3_+_Enterprise-blueviolet.svg)](LICENSE-AGPL.md)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter)](TEOREMA_DE_REPRESENTACIÓN_MODULAR_DE_π.ipynb)
+[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter)][Abrir cuaderno](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/ESPECTRO_MODULAR_π.ipynb)
 [![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.16578454-blue)](https://doi.org/10.5281/zenodo.17680024)
 
 
@@ -80,7 +80,7 @@ Todos los resultados presentados en el artículo son reproducibles.
 ### Ejecución Rápida
 Para replicar los experimentos de convergencia y validación de fórmulas, ejecute el notebook principal:
 
-[Abrir Notebook](Notebooks/ESPECTRO_MODULAR_π.ipynb)
+[Abrir cuaderno](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/ESPECTRO_MODULAR_π.ipynb)
 
 ---
 
