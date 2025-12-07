@@ -80,7 +80,7 @@ Todos los resultados presentados en el artículo son reproducibles.
 ### Ejecución Rápida
 Para replicar los experimentos de convergencia y validación de fórmulas, ejecute el notebook principal:
 
-[Abrir cuaderno](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/ESPECTRO_MODULAR_π.ipynb)
+[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter)](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/ESPECTRO_MODULAR_π.ipynb)
 
 ---
 
