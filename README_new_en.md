@@ -67,11 +67,11 @@ Using experimental mathematics and the **PSLQ** algorithm with 200-digit precisi
 
 | Parameter | Discovered Value | Meaning |
 | --- | --- | --- |
-| :--- | :--- | :--- |
-| **Leibniz** | $\displaystyle \frac{\pi}{4} = \sum_{k=0}^{\infty} \frac{(-1)^k}{2k+1}$ | $\displaystyle \pi = 3 \sum_{k=0}^{\infty} (-1)^k \left( \frac{1}{6k+1} + \frac{1}{6k+5} \right)$ |
-| **Euler** | $\displaystyle e^{i\pi} + 1 = 0$ | $\displaystyle e^{i\left[3 \sum (-1)^k \left( \frac{1}{6k+1} + \frac{1}{6k+5} \right)\right]} + 1 = 0$ |
-| **Wallis** | $\displaystyle \frac{\pi}{2} = \prod_{k=1}^{\infty} \frac{4k^2}{4k^2-1}$ | Producto separado sobre canales primos $\mathcal{C}_1$ y $\mathcal{C}_5$ |
-| **Normal** | $\displaystyle \int_{-\infty}^{\infty} e^{-x^2/2} dx = \sqrt{2\pi}$ | $\displaystyle \sqrt{6 \sum_{k=0}^{\infty} (-1)^k \left( \frac{1}{6k+1} + \frac{1}{6k+5} \right)}$ |
+| **Coef. A** | `1103` | Base linear term |
+| **Coef. B** | `26390` | Acceleration per iteration |
+| **Base** | `396^4` | Modular Invariant  |
+| **Convergencia** | **~8 digits/term** | Successful validation |
+
 
 ### 3. The Inert Prime Anomaly ($p=17$)
 
