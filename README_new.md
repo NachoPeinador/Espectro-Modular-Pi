@@ -1,5 +1,5 @@
-# The Modular Spectrum of 𝜋
-### From Prime Channel Structure to Elliptic Supercongruences
+# El espectro modular de 𝜋
+### Desde la Estructura de Canales Primos a las Supercongruencias Elípticas
 
 [![License](https://img.shields.io/badge/License-AGPLv3-blueviolet.svg?style=for-the-badge)](LICENSE-AGPL.md)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
