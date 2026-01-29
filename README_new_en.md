@@ -72,9 +72,9 @@ Using experimental mathematics and the **PSLQ** algorithm with 200-digit precisi
 | **Base** | `396^4` | Modular Invariant  |
 | **Convergence** | **~8 digits/term** | Successful validation |
 
-### 3. The Inert Prime Anomaly ()
+### 3. The Inert Prime Anomaly ($p=17$)
 
-We numerically detected that the Level 58 series "knows" the arithmetic of finite fields. For  (an inert prime in ), the truncated sum satisfies a strict supercongruence:
+We numerically detected that the Level 58 series "knows" the arithmetic of finite fields. For $p=17$ an inert prime in $\mathbb{Q}(\sqrt{-58})$ , the truncated sum satisfies a strict supercongruence:
 
 $$ S_{58}(17) \equiv 246 \pmod{289} $$
 
