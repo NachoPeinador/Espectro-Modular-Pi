@@ -97,9 +97,7 @@ Todo el código ha sido diseñado para ser auditable y reproducible.
 **Ejecución en la Nube:**
 Puedes replicar los experimentos de convergencia, el algoritmo Spigot y la detección PSLQ directamente en Google Colab:
 
-<a href="https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/ESPECTRO_MODULAR_π.ipynb" target="_blank">
-<img src="https://www.google.com/search?q=https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" height="50"/>
-</a>
+[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter)](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/ESPECTRO_MODULAR_π.ipynb)
 
 ---
 
@@ -113,7 +111,7 @@ Este proyecto trasciende la investigación pura; busca democratizar las matemát
 4. **Ingeniería:** Algoritmos Computacionales.
 5. **Teoría Profunda:** Sucesiones y Matrices.
 
-[👉 **Ver Guía Docente Completa](https://www.google.com/search?q=GUIA_DOCENTE.md)**
+## [👉 Acceder al Espacio Educativo y Guía Docente](GUIA_DOCENTE.md)
 
 ---
 
