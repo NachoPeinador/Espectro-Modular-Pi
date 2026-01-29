@@ -7,7 +7,7 @@
 [![Jupyter](https://img.shields.io/badge/Notebook-Experiment-F37626.svg?style=for-the-badge&logo=Jupyter&logoColor=white)](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/ESPECTRO_MODULAR_π.ipynb)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17680024-333333.svg?style=for-the-badge&logo=zenodo&logoColor=white)](https://doi.org/10.5281/zenodo.17680024)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0008--1822--3452-A6CE39.svg?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0008-1822-3452)
-[![Papers](https://img.shields.io/badge/Paper-Read_PDF-B31B1B?style=for-the-badge&logo=latex&logoColor=white)](https://github.com/NachoPeinador/Espectro-Modular-Pi/blob/main/Paper/ESPECTRO_MODULAR_π.pdf)
+[![Papers](https://img.shields.io/badge/Paper-Read_PDF-B31B1B?style=for-the-badge&logo=latex&logoColor=white)](https://github.com/NachoPeinador/Espectro-Modular-Pi/blob/main/Paper/Modular_Spectrum_of_π.pdf)
 
 > **"An unprecedented unification between classical linear analysis and high-energy modular form theory."**
 
