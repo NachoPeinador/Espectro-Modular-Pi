@@ -1,4 +1,4 @@
-# 𝜋 The Modular Spectrum of Pi
+# The Modular Spectrum of 𝜋
 ### From Prime Channel Structure to Elliptic Supercongruences
 
 [![License](https://img.shields.io/badge/License-AGPLv3-blueviolet.svg?style=for-the-badge)](LICENSE-AGPL.md)
