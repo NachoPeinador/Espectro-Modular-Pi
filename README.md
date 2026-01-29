@@ -171,7 +171,7 @@ If you use this work, code, or methodology in your research, please cite:
   year = {2025},
   publisher = {Zenodo},
   doi = {10.5281/zenodo.17680024},
-  url = {[https://doi.org/10.5281/zenodo.17680024](https://doi.org/10.5281/zenodo.17680024)}
+  url = {[https://doi.org/10.5281/zenodo.18417862](https://doi.org/10.5281/zenodo.18417862)}
 }
 
 ```
