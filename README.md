@@ -142,6 +142,8 @@ All code has been designed to be auditable and reproducible.
 **Cloud Execution:**
 You can replicate the convergence experiments, the Spigot algorithm, and PSLQ detection directly in Google Colab:
 
+[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter)](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/ESPECTRO_MODULAR_π.ipynb)
+
 ---
 
 ## 🎓 Educational Suite
@@ -154,7 +156,7 @@ This project transcends pure research; it seeks to democratize advanced mathemat
 4. **Engineering:** Computational Algorithms.
 5. **Deep Theory:** Sequences and Matrices.
 
-## [👉 Access the Educational Space and Teaching Guide](https://www.google.com/search?q=GUIA_DOCENTE.md)
+## [👉 Acceder al Espacio Educativo y Guía Docente](GUIA_DOCENTE.md)
 
 ---
 
