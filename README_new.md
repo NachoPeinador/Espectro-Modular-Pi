@@ -11,6 +11,17 @@
 
 ---
 
+## 🎯 TL;DR - Lo Esencial
+
+> **¿Qué es esto?** Una nueva teoría que conecta la constante $\pi$ con la distribución de los números primos.
+
+* **El Descubrimiento:** Demostramos que $\pi$ no es una estructura monolítica, sino que se construye sobre canales modulares primos ($6k \pm 1$).
+* **La Unificación:** Este enfoque une las fórmulas simples (tipo Leibniz) con las fórmulas ultra-rápidas (tipo Ramanujan).
+* **El Experimento:** Usamos algoritmos de búsqueda de relaciones enteras (PSLQ) con 200 dígitos de precisión para "redescubrir" fórmulas de $\pi$ que convergen a 8 dígitos por paso.
+* **El Resultado:** Un *paper* completo y un *notebook* ejecutable que validan matemáticas de frontera usando código Python accesible.
+
+---
+
 ## 🌌 Visión General
 
 Este proyecto presenta el marco teórico y la validación experimental del artículo **"El Espectro Modular de $\pi$"**. 
