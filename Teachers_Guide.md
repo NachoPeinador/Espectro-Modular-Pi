@@ -7,7 +7,7 @@ This guide accompanies the 5 interactive notebooks of the project. The pedagogic
 
 > **Reference:** Peinador Sala, J. I. (2025). *The Modular Spectrum of π*. Zenodo.
 
-📄 **[Download Teacher's Guide in PDF (for printing)](https://github.com/NachoPeinador/Espectro-Modular-Pi/blob/main/Docs/Guia_Docente.pdf)**
+📄 **[Download Teacher's Guide in PDF (for printing)](https://github.com/NachoPeinador/Espectro-Modular-Pi/blob/main/Docs/Teachers_guide.pdf)**
 
 ---
 
