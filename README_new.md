@@ -78,6 +78,15 @@ $$ S_{58}(17) \equiv 246 \pmod{289} $$
 
 ---
 
+### 📊 Validación Visual: Análisis de Convergencia
+
+Los experimentos confirman que, aunque la **Serie Modular** (azul) comparte la tasa de convergencia lineal $O(1/N)$ con la serie clásica de Leibniz (roja), su estructura algebraica es distinta. El gráfico Log-Log (derecha) valida la ley de potencia del error.
+
+![Gráfico de Convergencia Comparativa: Modular vs Leibniz vs Wallis](convergencia.png)
+*(Fig 1. Comparativa de error absoluto $N=1000$. Generado desde el Notebook experimental)*
+
+---
+
 ## 🧩 Unificación Estructural: Reformulando los Clásicos
 
 El paradigma modular $6k \pm 1$ no solo aplica a $\pi$, sino que permite reescribir las fórmulas fundamentales del análisis matemático, revelando simetrías ocultas y permitiendo nuevas estrategias de paralelización.
