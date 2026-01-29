@@ -82,8 +82,11 @@ $$ S_{58}(17) \equiv 246 \pmod{289} $$
 
 Los experimentos confirman que, aunque la **Serie Modular** (azul) comparte la tasa de convergencia lineal $O(1/N)$ con la serie clásica de Leibniz (roja), su estructura algebraica es distinta. El gráfico Log-Log (derecha) valida la ley de potencia del error.
 
-![Gráfico de Convergencia Comparativa: Modular vs Leibniz vs Wallis](convergencia.png)
-*(Fig 1. Comparativa de error absoluto $N=1000$. Generado desde el Notebook experimental)*
+<p align="center">
+  <img src="Images/convergencia.png" alt="Gráfico de Convergencia Comparativa: Modular vs Leibniz vs Wallis" width="100%">
+  <br>
+<em>Figura 1. Comparativa de error absoluto $N=1000$. Generado desde el Notebook experimental.</em>
+</p>
 
 ---
 
