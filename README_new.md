@@ -59,9 +59,9 @@ Utilizando matemáticas experimentales y el algoritmo **PSLQ** con 200 dígitos 
 | **Base** | `396^4` | Invariante Modular  |
 | **Convergencia** | **~8 dígitos/término** | Validación exitosa |
 
-### 3. La Anomalía del Primo Inerte ()
+### 3. La Anomalía del Primo Inerte ($p=17$)
 
-Detectamos numéricamente que la serie de Nivel 58 "conoce" la aritmética de cuerpos finitos. Para  (un primo inerte en ), la suma truncada satisface una supercongruencia estricta:
+Detectamos numéricamente que la serie de Nivel 58 "conoce" la aritmética de cuerpos finitos. Para $p=17$ (un primo inerte en $\mathbb{Q}(\sqrt{-58})$), la suma truncada satisface una supercongruencia estricta:
 
 $$ S_{58}(17) \equiv 246 \pmod{289} $$
 
