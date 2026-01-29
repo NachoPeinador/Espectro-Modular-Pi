@@ -1,4 +1,4 @@
-# 𝜋 The Modular Spectrum of Pi
+# The Modular Spectrum of Pi
 ### From Prime Channel Structure to Elliptic Supercongruences
 
 [![Read in Spanish](https://img.shields.io/badge/Lang-Leer%20en%20Español-red?style=for-the-badge&logoColor=white&color=BF0A30)](https://github.com/NachoPeinador/Espectro-Modular-Pi/blob/main/README_ES.md)
