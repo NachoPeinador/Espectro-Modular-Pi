@@ -86,7 +86,7 @@ $$ S_{58}(17) \equiv 246 \pmod{289} $$
 Experiments confirm that, although the **Modular Series** (blue) shares the linear convergence rate  with the classical Leibniz series (red), its algebraic structure is distinct. The Log-Log plot (right) validates the power law of the error.
 
 <p align="center">
-<img src="Images/convergencia.png" alt="Comparative Convergence Plot: Modular vs Leibniz vs Wallis" width="100%">
+<img src="Images/convergence.png" alt="Comparative Convergence Plot: Modular vs Leibniz vs Wallis" width="100%">
 
 
 
