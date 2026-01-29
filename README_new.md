@@ -78,6 +78,21 @@ $$ S_{58}(17) \equiv 246 \pmod{289} $$
 
 ---
 
+## 🧩 Unificación Estructural: Reformulando los Clásicos
+
+El paradigma modular $6k \pm 1$ no solo aplica a $\pi$, sino que permite reescribir las fórmulas fundamentales del análisis matemático, revelando simetrías ocultas y permitiendo nuevas estrategias de paralelización.
+
+| Concepto | Fórmula Clásica | Reformulación Modular (Nuestra Propuesta) |
+| :--- | :--- | :--- |
+| **Leibniz** | $\displaystyle \frac{\pi}{4} = \sum_{k=0}^{\infty} \frac{(-1)^k}{2k+1}$ | $\displaystyle \pi = 3 \sum_{k=0}^{\infty} (-1)^k \left( \frac{1}{6k+1} + \frac{1}{6k+5} \right)$ |
+| **Euler** | $\displaystyle e^{i\pi} + 1 = 0$ | $\displaystyle e^{i\left[3 \sum (-1)^k \left( \frac{1}{6k+1} + \frac{1}{6k+5} \right)\right]} + 1 = 0$ |
+| **Wallis** | $\displaystyle \frac{\pi}{2} = \prod_{k=1}^{\infty} \frac{4k^2}{4k^2-1}$ | *Producto separado sobre canales primos $\mathcal{C}_1$ y $\mathcal{C}_5$* |
+| **Normal** | $\displaystyle \int_{-\infty}^{\infty} e^{-x^2/2} dx = \sqrt{2\pi}$ | $\displaystyle \sqrt{6 \sum_{k=0}^{\infty} (-1)^k \left( \frac{1}{6k+1} + \frac{1}{6k+5} \right)}$ |
+
+> **💡 Implicación Computacional:** La reformulación de la serie de Leibniz permite desacoplar el cálculo en dos hilos independientes (streams de memoria para $6k+1$ y $6k+5$) sin dependencias de datos, ideal para implementaciones en GPUs/FPGAs.
+
+---
+
 ## 📂 Estructura del Repositorio
 
 ```text
