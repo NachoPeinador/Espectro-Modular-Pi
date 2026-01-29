@@ -102,13 +102,13 @@ Experiments confirm that, although the **Modular Series** (blue) shares the line
 The modular paradigm  applies not only to  but allows rewriting fundamental formulas of mathematical analysis, revealing hidden symmetries and enabling new parallelization strategies.
 
 | Concept | Classical Formula | Modular Reformulation (Our Proposal) |
-| --- | --- | --- |
-| **Leibniz** |  |  |
-| **Euler** |  |  |
-| **Wallis** |  | Separate product over prime channels  and  |
-| **Normal** |  |  |
+| :--- | :--- | :--- |
+| **Leibniz** | $\displaystyle \frac{\pi}{4} = \sum_{k=0}^{\infty} \frac{(-1)^k}{2k+1}$ | $\displaystyle \pi = 3 \sum_{k=0}^{\infty} (-1)^k \left( \frac{1}{6k+1} + \frac{1}{6k+5} \right)$ |
+| **Euler** | $\displaystyle e^{i\pi} + 1 = 0$ | $\displaystyle e^{i\left[3 \sum (-1)^k \left( \frac{1}{6k+1} + \frac{1}{6k+5} \right)\right]} + 1 = 0$ |
+| **Wallis** | $\displaystyle \frac{\pi}{2} = \prod_{k=1}^{\infty} \frac{4k^2}{4k^2-1}$ | Separate product over prime channels $\mathcal{C}_1$ y $\mathcal{C}_5$ |
+| **Normal** | $\displaystyle \int_{-\infty}^{\infty} e^{-x^2/2} dx = \sqrt{2\pi}$ | $\displaystyle \sqrt{6 \sum_{k=0}^{\infty} (-1)^k \left( \frac{1}{6k+1} + \frac{1}{6k+5} \right)}$ |
 
-> **💡 Computational Implication:** The reformulation of the Leibniz series allows decoupling the calculation into two independent threads (memory streams for  and ) without data dependencies, ideal for GPU/FPGA implementations.
+> **💡 Computational Implication:** The reformulation of the Leibniz series allows decoupling the calculation into two independent threads (memory streams for $6k+1$ and $6k+5$ ) without data dependencies, ideal for GPU/FPGA implementations.
 
 ---
 
