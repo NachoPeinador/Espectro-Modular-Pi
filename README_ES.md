@@ -166,7 +166,7 @@ He desarrollado una implementación avanzada que lleva estos conceptos al límit
 
 * **Isomorfismo DSP:** Pruebas formales de cómo la modulación en  es matemáticamente equivalente a los bancos de filtros polifásicos.
 * **Motor Stride-6:** Un algoritmo de tipo *Shared-Nothing* (sin recursos compartidos) que rompe el "muro de la memoria" en cálculos de alta precisión.
-* **Validación de Rigidez Espectral:** Análisis estadístico de los ceros de Riemann bajo el filtro modular ().
+* **Validación de Rigidez Espectral:** Análisis estadístico de los ceros de Riemann bajo el filtro modular ($p \approx 0.98$).
 
 ---
 
