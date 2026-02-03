@@ -170,10 +170,6 @@ He desarrollado una implementación avanzada que lleva estos conceptos al límit
 
 ---
 
-**Nota técnica:** He traducido *"Shared-Nothing"* añadiendo una breve aclaración, ya que en computación distribuida es un término clave que refuerza la idea de que tus canales son totalmente independientes.
-
-¿Te gustaría que también tradujera la sección de **"Performance Highlights"** o la tabla comparativa con **y-cruncher** para el README en español?
-
 ## ✍️ Citación
 
 Si utilizas este trabajo, código o metodología en tu investigación, por favor cita:
