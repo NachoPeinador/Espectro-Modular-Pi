@@ -166,7 +166,7 @@ If the **Modular Spectrum** defines the mathematical anatomy of , the **Algorith
 
 I have developed an advanced implementation that pushes these concepts to the computational limit, achieving **100 million digits** with 95% parallel efficiency through a formal isomorphism with Digital Signal Processing (DSP).
 
-### [👉 Explore the Hybridization Architecture in $\mathbb{Z}/6\mathbb{Z}$ ](https://github.com/NachoPeinador/Arquitectura-de-Hibridacion-Algoritmica-en-Z-6Z)
+### [👉 Explore the Hybridization Architecture in Z/6Z ](https://github.com/NachoPeinador/Arquitectura-de-Hibridacion-Algoritmica-en-Z-6Z)
 
 **What you will find there:**
 
