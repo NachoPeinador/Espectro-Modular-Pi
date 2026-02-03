@@ -172,7 +172,7 @@ I have developed an advanced implementation that pushes these concepts to the co
 
 * **DSP Isomorphism:** Formal proofs of how  modulation is mathematically equivalent to polyphase filter banks.
 * **Stride-6 Engine:** A *Shared-Nothing* algorithm that breaks the "memory wall" in high-precision computation.
-* **Spectral Rigidity Validation:** Statistical analysis of Riemann zeros under the modular filter ().
+* **Spectral Rigidity Validation:** Statistical analysis of Riemann zeros under the modular filter ($p \approx 0.98$).
 
 ---
 
