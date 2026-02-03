@@ -154,6 +154,26 @@ Este proyecto trasciende la investigación pura; busca democratizar las matemát
 
 ---
 
+## 🛰️ Próximo paso: De la teoría a la exaescala
+
+Si el **Espectro Modular** define la anatomía matemática de , la **Arquitectura de Hibridación Algorítmica** es su motor de ingeniería.
+
+He desarrollado una implementación avanzada que lleva estos conceptos al límite computacional, logrando calcular **100 millones de dígitos** con una eficiencia paralela del 95% mediante un isomorfismo formal con el Procesamiento Digital de Señales (DSP).
+
+### [👉 Explorar la Arquitectura de Hibridación en Z/6Z ](https://github.com/NachoPeinador/Arquitectura-de-Hibridacion-Algoritmica-en-Z-6Z/blob/main/README_es.md)
+
+**Lo que encontrarás allí:**
+
+* **Isomorfismo DSP:** Pruebas formales de cómo la modulación en  es matemáticamente equivalente a los bancos de filtros polifásicos.
+* **Motor Stride-6:** Un algoritmo de tipo *Shared-Nothing* (sin recursos compartidos) que rompe el "muro de la memoria" en cálculos de alta precisión.
+* **Validación de Rigidez Espectral:** Análisis estadístico de los ceros de Riemann bajo el filtro modular ().
+
+---
+
+**Nota técnica:** He traducido *"Shared-Nothing"* añadiendo una breve aclaración, ya que en computación distribuida es un término clave que refuerza la idea de que tus canales son totalmente independientes.
+
+¿Te gustaría que también tradujera la sección de **"Performance Highlights"** o la tabla comparativa con **y-cruncher** para el README en español?
+
 ## ✍️ Citación
 
 Si utilizas este trabajo, código o metodología en tu investigación, por favor cita:
