@@ -160,6 +160,22 @@ This project transcends pure research; it seeks to democratize advanced mathemat
 
 ---
 
+## 🛰️ Next Step: From Theory to Exascale
+
+If the **Modular Spectrum** defines the mathematical anatomy of , the **Algorithmic Hybridization Architecture** is its engineering engine.
+
+I have developed an advanced implementation that pushes these concepts to the computational limit, achieving **100 million digits** with 95% parallel efficiency through a formal isomorphism with Digital Signal Processing (DSP).
+
+### [👉 Explore the Hybridization Architecture in ](https://github.com/NachoPeinador/Arquitectura-de-Hibridacion-Algoritmica-en-Z-6Z)
+
+**What you will find there:**
+
+* **DSP Isomorphism:** Formal proofs of how  modulation is mathematically equivalent to polyphase filter banks.
+* **Stride-6 Engine:** A *Shared-Nothing* algorithm that breaks the "memory wall" in high-precision computation.
+* **Spectral Rigidity Validation:** Statistical analysis of Riemann zeros under the modular filter ().
+
+---
+
 ## ✍️ Citation
 
 If you use this work, code, or methodology in your research, please cite:
