@@ -156,7 +156,7 @@ This project transcends pure research; it seeks to democratize advanced mathemat
 4. **Engineering:** Computational Algorithms.
 5. **Deep Theory:** Sequences and Matrices.
 
-## [👉 Acceder al Espacio Educativo y Guía Docente](Teachers_Guide.md)
+## [👉 Access the Educational Space and Teacher's Guide](Teachers_Guide.md)
 
 ---
 
