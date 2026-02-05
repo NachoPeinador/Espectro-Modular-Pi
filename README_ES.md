@@ -168,6 +168,20 @@ He desarrollado una implementación avanzada que lleva estos conceptos al límit
 * **Motor Stride-6:** Un algoritmo de tipo *Shared-Nothing* (sin recursos compartidos) que rompe el "muro de la memoria" en cálculos de alta precisión.
 * **Validación de Rigidez Espectral:** Análisis estadístico de los ceros de Riemann bajo el filtro modular ($p \approx 0.98$).
 
+## ⚛️ Descubrimiento Fundamental: Ceros de Riemann & Coherencia Modular
+
+* **Dualidad Espectral-Aritmética:** Prueba matemática que conecta los ceros de Riemann con la estructura de primos.
+
+* **Anomalía Modular Extrema:** Violación estadística de la uniformidad (valores p ~10⁻⁷⁵) en los canales primos.
+
+* **Teorema de Saturación SNR:** Cuantización de información aritmética en SNR ≈ 12.69 desde la identidad L(2,χ₀⁽⁶⁾) = (π/3)².
+
+* **Ensemble Riemann-GUE:** Modelo unificador que preserva el caos local (GUE) mientras codifica el orden modular global.
+
+### [👉 Explora Riemann-Z6: El Cristal Aritmético](https://github.com/NachoPeinador/RIEMANN_Z6/blob/main/README.md)
+
+**Hilo Común:** Todos los proyectos aprovechan la **aritmética modular (Z/6Z)** como principio organizador fundamental, ya sea filtrando canales primos en el cálculo de π o estructurando ensembles de matrices para los ceros de Riemann. Esta coherencia transdominio sugiere que Z/6Z representa una primitiva computacional universal para el procesamiento de información a través de sistemas matemáticos, físicos y, quizás, biológicos.
+
 ---
 
 ## ✍️ Citación
