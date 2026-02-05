@@ -174,6 +174,20 @@ I have developed an advanced implementation that pushes these concepts to the co
 * **Stride-6 Engine:** A *Shared-Nothing* algorithm that breaks the "memory wall" in high-precision computation.
 * **Spectral Rigidity Validation:** Statistical analysis of Riemann zeros under the modular filter ($p \approx 0.98$).
 
+## ⚛️ Fundamental Discovery: Riemann Zeros & Modular Coherence
+
+* **Spectral-Aritmetic Duality:** Mathematical proof connecting Riemann zeros with prime structure
+
+* **Extreme Modular Anomaly:** Statistical violation of uniformity (p-values ~10⁻⁷⁵) in prime channels
+
+* **SNR Saturation Theorem:** Quantization of arithmetic information at SNR ≈ 12.69 from identity L(2,χ₀⁽⁶⁾) = (π/3)²
+
+* **Riemann-GUE Ensemble:** Unifying model preserving local chaos (GUE) while encoding global modular order
+
+### [👉 Explore Riemann-Z6: The Arithmetic Crystal ](https://github.com/NachoPeinador/https://github.com/NachoPeinador/RIEMANN_Z6/blob/main/README.md)
+
+**Common Thread:** All projects leverage **modular arithmetic (Z/6Z)** as a fundamental organizing principle—whether filtering prime channels in π computation or structuring matrix ensembles for Riemann zeros. This cross-domain coherence suggests that Z/6Z represents a universal computational primitive for information processing across mathematical, physical, and maybe, biological systems.
+
 ---
 
 ## ✍️ Citation
