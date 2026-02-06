@@ -184,7 +184,7 @@ I have developed an advanced implementation that pushes these concepts to the co
 
 * **Riemann-GUE Ensemble:** Unifying model preserving local chaos (GUE) while encoding global modular order
 
-### [👉 Explore Riemann-Z6: The Arithmetic Crystal ](https://github.com/NachoPeinador/https://github.com/NachoPeinador/RIEMANN_Z6/blob/main/README.md)
+### [👉 Explore Riemann-Z6: The Arithmetic Crystal ](https://github.com/NachoPeinador/RIEMANN_Z6/blob/main/README.md)
 
 **Common Thread:** All projects leverage **modular arithmetic (Z/6Z)** as a fundamental organizing principle—whether filtering prime channels in π computation or structuring matrix ensembles for Riemann zeros. This cross-domain coherence suggests that Z/6Z represents a universal computational primitive for information processing across mathematical, physical, and maybe, biological systems.
 
