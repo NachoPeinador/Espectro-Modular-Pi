@@ -34,7 +34,7 @@ This guide accompanies the 5 interactive notebooks of the project. The pedagogic
 * **🔐 Cryptography:** The "Prime Benchmark" demonstrates that skipping useless modular channels (0, 2, 3, 4) accelerates prime number search by **~33%**. This is vital in cybersecurity.
 * **Basel Problem:** Numerical resolution of $\sum 1/n^2 = \pi^2/6$ using the square of the modular series.
 
-#### 🧬 Session 5: Abstract Theory [Open Notebook](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/El_Código_Fuente_de_las_Matemáticas.ipynb)
+#### 🧬 Session 5: Abstract Theory 🧬 The Source Code of Mathematics [Open Notebook](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/🧬_The_Source_Code_of_Mathematics.ipynb)
 * **Focus:** Paradigm Shift.
 * **🌻 Fibonacci:** Discovery of the 24-step cycle (**Pisano Period**) in nature.
 * **Modular Matrix:** Visualization of "strong interactions" (prime channel crossings) in matrices, suggesting hidden structures in linear algebra.
