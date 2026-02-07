@@ -19,7 +19,7 @@ This guide accompanies the 5 interactive notebooks of the project. The pedagogic
 * **❓ FAQ:** *"Why is 25 on the list if it's not prime?"*
     * **Answer:** In the modular sum, we filter numbers coprime to 6 (not even, not multiples of 3). 25 fulfills this condition. In the Euler product (Session 2), we will be stricter.
 
-#### 🔗 Session 2: Deep Connections [Open Notebook](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/El_Universo_Conectado_de_π_Probabilidad,_Complejos_y_Misterios.ipynb)
+#### 🔗 Session 2: Deep Connections 🌌 The Connected Universe of π [Open Notebook](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/🌌_The_Connected_Universe_of_π.ipynb)
 * **Focus:** The omnipresence of $\pi$.
 * **⭐ Star Activity:** Calculate the area of the Bell Curve (Gaussian) using a series of simple fractions. This is a very powerful moment of interdisciplinary connection.
 * **💬 Debate:** Compare the modular formula (slow but understandable) with Ramanujan's (fast but obscure). Discuss *"Efficiency vs. Explainability"*.
