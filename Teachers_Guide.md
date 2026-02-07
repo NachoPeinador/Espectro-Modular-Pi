@@ -24,7 +24,7 @@ This guide accompanies the 5 interactive notebooks of the project. The pedagogic
 * **⭐ Star Activity:** Calculate the area of the Bell Curve (Gaussian) using a series of simple fractions. This is a very powerful moment of interdisciplinary connection.
 * **💬 Debate:** Compare the modular formula (slow but understandable) with Ramanujan's (fast but obscure). Discuss *"Efficiency vs. Explainability"*.
 
-#### 🌍 Session 3: Application and Geometry [Open Notebook](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/π_en_Acción_Geometría,_Dimensiones_y_lo_Imposible.ipynb)
+#### 🌍 Session 3: Application and Geometry 🌍 π in Action: Geometry, Dimensions and the Impossible [Open Notebook](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/🌍_π_in_Action_Geometry_Dimensions_and_the_Impossible.ipynb)
 * **Focus:** Error propagation.
 * **Analogy:** **"Losing the Mediterranean Sea"**. When calculating the volume of the Earth ($r^3$), a decimal error in $\pi$ is magnified cubically.
 * **Monte Carlo:** Visual demonstration that chance (brute force) is computationally inefficient compared to an ordered mathematical structure.
