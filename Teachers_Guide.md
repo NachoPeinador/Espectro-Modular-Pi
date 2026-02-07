@@ -13,7 +13,7 @@ This guide accompanies the 5 interactive notebooks of the project. The pedagogic
 
 ### 2. Session Breakdown
 
-#### 📘 Session 1: Arithmetic and Patterns [Open Notebook](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/Desbloqueando_los_Secretos_de_π.ipynb)
+#### 📘 Session 1: Arithmetic and Patterns [Open Notebook](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/🕵️‍♂️ Unlocking the Secrets of π.ipynb)
 * **Focus:** Understanding that not all algorithms are created equal.
 * **Key Point:** The **"Modular Clock"**. Students must visualize that prime numbers (and useful terms of $\pi$) only exist in channels $1$ and $5$ of modulo $6$.
 * **❓ FAQ:** *"Why is 25 on the list if it's not prime?"*
