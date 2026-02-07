@@ -29,7 +29,7 @@ This guide accompanies the 5 interactive notebooks of the project. The pedagogic
 * **Analogy:** **"Losing the Mediterranean Sea"**. When calculating the volume of the Earth ($r^3$), a decimal error in $\pi$ is magnified cubically.
 * **Monte Carlo:** Visual demonstration that chance (brute force) is computationally inefficient compared to an ordered mathematical structure.
 
-#### ⚙️ Session 4: Engineering and Algorithms [Open Notebook](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/Las_Herramientas_del_Infinito.ipynb)
+#### ⚙️ Session 4: Engineering and Algorithms 🛠️ The Tools of Infinity [Open Notebook](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/🛠️_The_Tools_of_Infinity.ipynb)
 * **Focus:** Practical utility.
 * **🔐 Cryptography:** The "Prime Benchmark" demonstrates that skipping useless modular channels (0, 2, 3, 4) accelerates prime number search by **~33%**. This is vital in cybersecurity.
 * **Basel Problem:** Numerical resolution of $\sum 1/n^2 = \pi^2/6$ using the square of the modular series.
