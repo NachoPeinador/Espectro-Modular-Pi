@@ -186,6 +186,20 @@ I have developed an advanced implementation that pushes these concepts to the co
 
 ### [👉 Explore Riemann-Z6: The Arithmetic Crystal ](https://github.com/NachoPeinador/RIEMANN_Z6/blob/main/README.md)
 
+## 🌌 The Physical Manifestation: Modular Substrate Theory (MST)
+
+If the projects above demonstrate the computational and arithmetic power of $\mathbb{Z}/6\mathbb{Z}$, **MST** applies this geometry to the fabric of spacetime itself. We move from the *calculation* of constants to the *derivation* of reality.
+
+This framework proposes that the vacuum is a discrete information-processing substrate, where the efficiency of the modular filter defines the fundamental constants of nature.
+
+### [👉 Explore the Unified Physics Framework ](https://github.com/NachoPeinador/Modular-Substrate-Theory)
+
+**Key Physical Breakthroughs:**
+
+* **Cosmological Unification:** Simultaneously resolves the **Hubble Tension** ($H_0$) and **S8 Tension** via a geometric "Phase Bubble" and vacuum impedance.
+* **The Alpha Derivation:** Analytically derives the **Fine-Structure Constant ($\alpha$)** to 14 decimal places ($137.035...$) with zero free parameters.
+* **Hadronic Spectrum:** Maps the mass of exotic hadrons (Hexaquark $d^*$, Tetraquark $T_{cc}^+$) using the same scaling factor ($\beta = 3/4$) that shapes the cosmos.
+
 **Common Thread:** All projects leverage **modular arithmetic (Z/6Z)** as a fundamental organizing principle—whether filtering prime channels in π computation or structuring matrix ensembles for Riemann zeros. This cross-domain coherence suggests that Z/6Z represents a universal computational primitive for information processing across mathematical, physical, and maybe, biological systems.
 
 ---
