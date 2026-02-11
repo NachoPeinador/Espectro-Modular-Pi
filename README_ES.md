@@ -180,6 +180,20 @@ He desarrollado una implementación avanzada que lleva estos conceptos al límit
 
 ### [👉 Explora Riemann-Z6: El Cristal Aritmético](https://github.com/NachoPeinador/RIEMANN_Z6/blob/main/README.md)
 
+## 🌌 La Manifestación Física: Teoría del Sustrato Modular (MST)
+
+Si los proyectos anteriores demuestran el poder computacional y aritmético de $\mathbb{Z}/6\mathbb{Z}$, **MST** aplica esta geometría al tejido mismo del espacio-tiempo. Pasamos del *cálculo* de constantes a la *derivación* de la realidad.
+
+Este marco propone que el vacío es un sustrato discreto de procesamiento de información, donde la eficiencia del filtro modular define las constantes fundamentales de la naturaleza.
+
+### [👉 Explorar el Marco Físico Unificado ](https://github.com/NachoPeinador/Modular-Substrate-Theory)
+
+**Avances Físicos Clave:**
+
+* **Unificación Cosmológica:** Resuelve simultáneamente la **Tensión de Hubble** ($H_0$) y la **Tensión S8** mediante una "Burbuja de Fase" geométrica y la impedancia del vacío.
+* **La Derivación de Alpha:** Deriva analíticamente la **Constante de Estructura Fina ($\alpha$)** hasta 14 decimales ($137.035...$) con cero parámetros libres.
+* **Espectro Hadrónico:** Mapea la masa de hadrones exóticos (Hexaquark $d^*$, Tetraquark $T_{cc}^+$) usando el mismo factor de escala ($\beta = 3/4$) que modela el cosmos.
+
 **Hilo Común:** Todos los proyectos aprovechan la **aritmética modular (Z/6Z)** como principio organizador fundamental, ya sea filtrando canales primos en el cálculo de π o estructurando ensembles de matrices para los ceros de Riemann. Esta coherencia transdominio sugiere que Z/6Z representa una primitiva computacional universal para el procesamiento de información a través de sistemas matemáticos, físicos y, quizás, biológicos.
 
 ---
