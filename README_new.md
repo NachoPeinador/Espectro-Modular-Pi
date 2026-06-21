@@ -81,7 +81,7 @@ For the special case $m=6$, the resonant channels ($r=1,5$) form a Hilbert space
 The Colab notebook verifies the isomorphism numerically on the Leibniz series. The modular channels sum exactly to the original series value, confirming the perfect reconstruction property to machine precision.
 
 <p align="center">
-<img src="Images/convergence_modular.png" alt="Convergence of the modular decomposition vs. direct Leibniz series" width="100%">
+<img src="Images/convergence.png" alt="Convergence of the modular decomposition vs. direct Leibniz series" width="100%">
 
 <em>Figure 1. Convergence comparison between the direct Leibniz series and its modular decomposition (m=6). Both converge to the same limit, but the modular version reveals the internal arithmetic structure.</em>
 </p>
