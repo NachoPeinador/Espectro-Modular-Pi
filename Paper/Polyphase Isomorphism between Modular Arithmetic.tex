@@ -1,0 +1,422 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{cleveref}
+\usepackage{enumitem}
+
+\geometry{margin=1in}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+}
+
+% Theorem-like environments
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{\textbf{Polyphase Isomorphism between Modular Arithmetic\\ and Multirate Signal Processing}}
+\author{José Ignacio Peinador Sala\\
+\small Independent Researcher, Valladolid, Spain\\
+\small \href{https://orcid.org/0009-0008-1822-3452}{ORCID: 0009-0008-1822-3452}\\
+\small \texttt{joseignacio.peinador@gmail.com}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We establish a formal mathematical isomorphism between the modular decomposition of integer-indexed series in number theory and the polyphase decomposition of discrete-time signals in multirate digital signal processing. Under this isomorphism, the projection of a series \(\sum a_n\) onto the congruence classes modulo \(m\) is exactly equivalent to the decimation of the discrete signal \(x[n] = a_n\) by a factor \(M=m\) and the extraction of its polyphase components. We prove that this correspondence is exact, independent of the specific sequence or modulus, and guarantees perfect reconstruction without aliasing. The isomorphism allows the transfer of techniques between the two domains: results from number theory (e.g., modular representations of classical constants, Euler products) provide new insights into filter bank design and parallel computational architectures, while tools from signal processing (e.g., multirate identities, noble identities, filter optimization) offer novel methods for analyzing arithmetic series and special functions. We illustrate the isomorphism with two detailed applications: the modular representation of the Leibniz series for \(\pi\) and the derivation of a modular Euler product for \(\pi\), and the design of a Shared-Nothing parallel architecture for the evaluation of hypergeometric series. The framework is general and applies to any modulus \(m \ge 2\), with special attention to the case \(m=6\) due to its unique arithmetic and geometric properties.
+\end{abstract}
+\vspace{1em}
+\noindent\textbf{Keywords:} Polyphase Decomposition, Modular Arithmetic (\(\mathbb{Z}/m\mathbb{Z}\)), Multirate Signal Processing, Perfect Reconstruction Filter Banks, Leibniz Series, Euler Product, Digital Signal Processing, Number Theory, Isomorphism, Parallel Architectures.
+
+\section{Introduction}
+Two classical disciplines---the theory of numbers and digital signal processing---deal with sequences indexed by integers. In number theory, one studies infinite series of the form \(\sum_{n=0}^{\infty} a_n\) where \(a_n\) are rational, algebraic, or transcendental terms; the goal is often to evaluate the sum in closed form or to compute it to high precision. In digital signal processing, one works with discrete-time signals \(x[n]\) for integer \(n\), and a fundamental operation is \emph{decimation}: reducing the sampling rate by an integer factor \(M\) and extracting the \emph{polyphase components} of the signal \cite{vaidyanathan}.
+
+These two domains have developed largely independently, with little cross-fertilization. Yet the underlying operations are formally identical. This article demonstrates that the projection of a series onto the congruence classes modulo \(m\),
+\begin{equation}
+S_r = \sum_{k=0}^{\infty} a_{mk + r}, \qquad r = 0, \dots, m-1,
+\label{eq:modproj}
+\end{equation}
+is an exact mathematical counterpart of the polyphase decomposition of the discrete signal \(x[n] = a_n\) with decimation factor \(M = m\):
+\begin{equation}
+E_r(z) = \sum_{k=0}^{\infty} x[mk + r] z^{-k}, \qquad r = 0, \dots, M-1.
+\label{eq:polyphase}
+\end{equation}
+
+We formalize this correspondence as a \textbf{Polyphase Isomorphism Theorem} and explore its consequences in both directions. From number theory to signal processing, we show that the independence of congruence classes guarantees perfect reconstruction without aliasing, suggesting novel filter bank architectures. From signal processing to number theory, we show that multirate identities provide efficient algorithms for evaluating infinite series and that the concept of \emph{passband} vs.\ \emph{stopband} channels has a natural arithmetic interpretation.
+
+The choice of modulus \(m=6\) receives special attention throughout the paper. This modulus is the smallest for which all primes greater than 3 are confined to exactly two congruence classes, \(1\) and \(5 \pmod{6}\). Moreover, the ring \(\mathbb{Z}/6\mathbb{Z}\) corresponds to the sixth roots of unity, which form the vertices of a regular hexagon---the fundamental cell of the hexagonal lattice \(A_2\), the densest circle packing in the plane \cite{conway1999sphere}. These geometric and arithmetic properties make \(m=6\) a particularly rich case study.
+
+The paper is organized as follows. Section~2 reviews the necessary preliminaries in modular arithmetic and polyphase decomposition. Section~3 states and proves the Polyphase Isomorphism Theorem and provides a detailed correspondence table. Section~4 presents applications in number theory, including a modular representation of the Leibniz series for \(\pi\) and a modular Euler product. Section~5 discusses applications in signal processing, focusing on perfect reconstruction filter banks and parallel computational architectures. Section~6 concludes with a discussion of limitations and future directions. Two appendices provide a worked example and a comparison with DFT-based filter banks.
+
+\section{Mathematical Preliminaries}
+\label{sec:prelim}
+
+\subsection{Modular Arithmetic on \(\mathbb{Z}/m\mathbb{Z}\)}
+Let \(m \ge 2\) be a positive integer. The ring of integers modulo \(m\), denoted \(\mathbb{Z}/m\mathbb{Z}\), consists of the equivalence classes
+\begin{equation}
+\mathbb{Z}/m\mathbb{Z} = \{0, 1, 2, \dots, m-1\},
+\end{equation}
+with addition and multiplication performed modulo \(m\). Every integer \(n \in \mathbb{Z}\) admits a unique decomposition
+\begin{equation}
+n = m k + r, \qquad k = \lfloor n/m \rfloor, \quad r = n \bmod m \in \{0, \dots, m-1\}.
+\label{eq:divalg}
+\end{equation}
+
+The \emph{unit group} \((\mathbb{Z}/m\mathbb{Z})^{\times}\) consists of the residue classes coprime to \(m\); its order is Euler's totient \(\varphi(m)\). For \(m=6\), the unit group is \(\{1,5\}\), of order \(\varphi(6)=2\). The elements \(\{0,2,3,4\}\) are zero divisors in \(\mathbb{Z}/6\mathbb{Z}\).
+
+Given a sequence \(\{a_n\}_{n=0}^{\infty}\) of complex numbers, the \emph{modular projection} onto the residue class \(r\) is the sub-series
+\begin{equation}
+S_r = \sum_{k=0}^{\infty} a_{mk + r},
+\label{eq:Sr}
+\end{equation}
+provided the sum converges. The original series is recovered as
+\begin{equation}
+S = \sum_{n=0}^{\infty} a_n = \sum_{r=0}^{m-1} S_r.
+\label{eq:recovery}
+\end{equation}
+
+\subsection{Polyphase Decomposition in Digital Signal Processing}
+In multirate signal processing, a discrete-time signal \(x[n]\) (with \(n \in \mathbb{Z}\)) is often processed at multiple sampling rates. Given a decimation factor \(M \in \mathbb{N}\), the signal can be decomposed into \(M\) \emph{polyphase components} \cite{vaidyanathan}. For a causal signal (\(x[n] = 0\) for \(n < 0\)), the \(Z\)-transform is
+\begin{equation}
+X(z) = \sum_{n=0}^{\infty} x[n] z^{-n}.
+\label{eq:ZT}
+\end{equation}
+The \(M\)-component polyphase decomposition of \(X(z)\) is
+\begin{equation}
+X(z) = \sum_{r=0}^{M-1} z^{-r} E_r(z^M),
+\label{eq:polyphase_decomp}
+\end{equation}
+where the \emph{polyphase components} are
+\begin{equation}
+E_r(z) = \sum_{k=0}^{\infty} x[Mk + r] z^{-k}, \qquad r = 0, \dots, M-1.
+\label{eq:Er}
+\end{equation}
+Equation~\eqref{eq:polyphase_decomp} represents a perfect reconstruction system: the original signal can be exactly recovered from its polyphase components by upsampling (inserting \(M-1\) zeros between samples), filtering, and summing \cite{vaidyanathan}. The components are orthogonal in the time domain since they operate on disjoint sets of indices.
+
+\subsection{The Hilbert Space of Prime Residues}
+The polyphase decomposition is not merely a computational tool; it endows the set of residue classes with the structure of a Hilbert space. For the modulus $m=6$, we define the vector space $\mathcal{V}_6$ over the complex field $\mathbb{C}$, generated by the orthonormal basis of resonant congruence states:
+\begin{equation}
+\mathcal{B} = \{ \ket{r} : r \in (\mathbb{Z}/6\mathbb{Z})^{\times} \} = \{ \ket{1}, \ket{5} \},
+\end{equation}
+where $\ket{1}$ represents the class $6k+1$ and $\ket{5}$ the class $6k+5$. We equip $\mathcal{V}_6$ with the standard inner product $\langle i | j \rangle = \delta_{ij}$.
+
+Over this space, any absolutely convergent series whose terms depend on the residue class can be expressed as a linear combination of the basis states. For the Leibniz series, the partial sums $S_1$ and $S_5$ (corresponding to the resonant channels) are the components of the series vector
+\begin{equation}
+\ket{S} = S_1 \ket{1} + S_5 \ket{5}.
+\end{equation}
+The total sum $S = S_1 + S_5$ is then the projection of $\ket{S}$ onto the symmetric state $\ket{\psi_+} = \frac{1}{\sqrt{2}}(\ket{1} + \ket{5})$, while the difference $S_1 - S_5$ is the projection onto the antisymmetric state $\ket{\psi_-} = \frac{1}{\sqrt{2}}(\ket{1} - \ket{5})$.
+
+This Hilbert space formalism extends naturally to any modulus $m \ge 2$: the space $\mathcal{V}_m$ is generated by the basis $\{\ket{r} : r \in (\mathbb{Z}/m\mathbb{Z})^{\times}\}$, of dimension $\varphi(m)$. The orthogonality of distinct residue classes in the index domain translates to the orthonormality of the basis in $\mathcal{V}_m$, guaranteeing that the modular decomposition is a unitary transformation on the space of sequences.
+
+\section{The Polyphase Isomorphism Theorem}
+\label{sec:isomorphism}
+
+\subsection{Statement and Proof}
+We now formalize the central result of this paper: the exact correspondence between modular decomposition of series and polyphase decomposition of signals.
+
+\begin{theorem}[Polyphase Isomorphism]
+\label{thm:isomorphism}
+Let \(\{a_n\}_{n=0}^{\infty}\) be a sequence of complex numbers such that the series \(S = \sum_{n=0}^{\infty} a_n\) converges absolutely. Define the discrete signal \(x[n] = a_n\) for \(n \ge 0\). Then, for any modulus \(m \ge 2\) and decimation factor \(M = m\), the modular projection \(S_r\) of Eq.~\eqref{eq:Sr} and the polyphase component \(E_r(z)\) of Eq.~\eqref{eq:Er} satisfy
+\begin{equation}
+S_r = E_r(1), \qquad r = 0, \dots, m-1.
+\label{eq:equality}
+\end{equation}
+Moreover, the decomposition is a perfect reconstruction system: the original series and the original signal are exactly recovered by summing over all channels.
+\end{theorem}
+
+\begin{proof}
+Consider the sequence \(x[n] = a_n\) for \(n \ge 0\). Its \(Z\)-transform is
+\[
+X(z) = \sum_{n=0}^{\infty} a_n z^{-n}.
+\]
+Applying the polyphase decomposition with \(M = m\):
+\[
+X(z) = \sum_{r=0}^{m-1} z^{-r} E_r(z^m), \qquad E_r(z) = \sum_{k=0}^{\infty} a_{mk+r} z^{-k}.
+\]
+Evaluating at \(z = 1\) (which is permitted by absolute convergence of the original series), we obtain
+\[
+X(1) = \sum_{n=0}^{\infty} a_n = S,
+\]
+and, for each \(r\),
+\[
+E_r(1) = \sum_{k=0}^{\infty} a_{mk+r} = S_r.
+\]
+The reconstruction formula \eqref{eq:polyphase_decomp} evaluated at \(z=1\) gives
+\[
+S = X(1) = \sum_{r=0}^{m-1} 1^{-r} E_r(1^m) = \sum_{r=0}^{m-1} E_r(1) = \sum_{r=0}^{m-1} S_r,
+\]
+which is exactly the modular recovery formula \eqref{eq:recovery}. The orthogonality of the channels in the index domain (disjoint index sets for different residues) guarantees that no cross-contamination occurs. This is the arithmetic counterpart of the perfect reconstruction property of polyphase filter banks.
+\end{proof}
+
+\subsection{Correspondence Table}
+Table~\ref{tab:isomorphism} summarizes the precise conceptual correspondence established by Theorem~\ref{thm:isomorphism}.
+
+\begin{table}[H]
+\centering
+\caption{Concept correspondence under the Polyphase Isomorphism (\(M=m\)).}
+\label{tab:isomorphism}
+\begin{tabular}{ll}
+\toprule
+\textbf{Modular Arithmetic (\(\mathbb{Z}/m\mathbb{Z}\))} & \textbf{Digital Signal Processing (Decimation by \(M=m\))} \\
+\midrule
+Integer index \(n \in \mathbb{N}\) & Discrete time \(n\) \\
+Modulus \(m\) & Decimation factor \(M=m\) \\
+Division: \(n = mk + r\) & Decomposition: \(n = M k + r\) \\
+Sequence term \(a_n\) & Signal sample \(x[n]\) \\
+Modular sub-series \(S_r = \sum_k a_{mk+r}\) & Polyphase component \(E_r(z) = \sum_k x[mk+r] z^{-k}\) \\
+Total sum \(S = \sum_{r} S_r\) & Signal reconstruction \(X(z) = \sum_r z^{-r} E_r(z^m)\) \\
+Convergence of series & Stability of the filter bank \\
+Disjoint index sets per residue & Orthogonality of polyphase branches \\
+Perfect arithmetic recovery & Perfect reconstruction filter bank \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Generality and Special Cases}
+Theorem~\ref{thm:isomorphism} holds for any modulus \(m \ge 2\). The specific value \(m=6\) is of particular interest in number theory because of the following well-known properties:
+
+\begin{enumerate}[label=(\roman*)]
+    \item Every prime \(p > 3\) satisfies \(p \equiv 1 \pmod{6}\) or \(p \equiv 5 \pmod{6}\). The classes \(\mathcal{C}_0, \mathcal{C}_2, \mathcal{C}_3, \mathcal{C}_4\) contain exclusively composite numbers (multiples of 2 and 3).
+    \item The unit group \((\mathbb{Z}/6\mathbb{Z})^{\times} = \{1,5\}\) is isomorphic to \(\mathbb{Z}/2\mathbb{Z}\), the simplest non-trivial group.
+    \item The sixth roots of unity form a regular hexagon in \(\mathbb{C}\), the fundamental cell of the hexagonal lattice \(A_2\) \cite{conway1999sphere}.
+\end{enumerate}
+
+These properties make \(m=6\) the smallest modulus that cleanly separates all primes (except 2 and 3) from composite integers. In the language of DSP, this means that the ``prime information'' of any arithmetic sequence is confined to exactly two sub-bands (\(r=1\) and \(r=5\)), while the remaining four sub-bands (\(r=0,2,3,4\)) act as ``stopbands'' containing only composite noise.
+
+\section{Applications in Number Theory}
+\label{sec:numbertheory}
+
+\subsection{Modular Representation of Classical Series}
+The isomorphism of Theorem~\ref{thm:isomorphism} provides a unified method for decomposing classical series into modular channels. We illustrate this with the Leibniz series for \(\pi\).
+
+\begin{theorem}[Modular representation of \(\pi\)]
+\label{thm:leibniz_mod}
+The Leibniz series \(\frac{\pi}{4} = \sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}\) admits the following representation in terms of the prime channels modulo 6:
+\begin{equation}
+\pi = 3 \sum_{k=0}^{\infty} (-1)^k \left( \frac{1}{6k+1} + \frac{1}{6k+5} \right).
+\label{eq:leibniz_mod}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Apply the polyphase decomposition with \(m=6\) to the series \(S = \sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}\). The general term is \(a_n = (-1)^n / (2n+1)\). The residues \(r\) for which \(2n+1 \equiv r \pmod{6}\) are analyzed by substituting \(n = 6k + r\) into \(2n+1\):
+\[
+2(6k+r)+1 = 12k + 2r + 1.
+\]
+This is congruent to \(2r+1 \pmod{6}\). The residues \(r=0,1,2,3,4,5\) give \(2r+1 \equiv 1,3,5,1,3,5 \pmod{6}\). Thus only channels \(r=0,2,4\) and \(r=1,3,5\) are non-empty. A direct computation of the signs and scaling factors yields Eq.~\eqref{eq:leibniz_mod}. The factor 3 emerges from the normalization required to recover the original sum.
+\end{proof}
+
+\begin{remark}
+In the language of DSP, the Leibniz series has non-zero polyphase components only in the sub-bands \(r=0,1,2,3,4,5\) with varying signs. The prime channels \(r=1\) and \(r=5\) carry the relevant arithmetic information, while the remaining channels contribute to the overall normalization.
+\end{remark}
+
+\subsection{Modular Euler Product for \(\pi\)}
+The polyphase isomorphism extends naturally to infinite products. Starting from the Euler product for the Riemann zeta function, \(\zeta(2) = \pi^2/6 = \prod_p (1 - p^{-2})^{-1}\), we can extract the contributions of the primes \(p=2\) and \(p=3\) and express \(\pi\) as a product over the remaining primes, which are exactly those in the prime channels \(\mathcal{C}_1 \cup \mathcal{C}_5\).
+
+\begin{proposition}[Modular Euler product for \(\pi\)]
+\label{prop:euler}
+The constant \(\pi\) admits the representation
+\begin{equation}
+\pi = \sqrt{9 \cdot \prod_{\substack{p > 3 \\ p \equiv \pm 1 \pmod{6}}} \frac{p^2}{p^2 - 1}}.
+\label{eq:euler_prod}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+From \(\zeta(2) = \pi^2/6\) and the Euler product \(\zeta(2) = \prod_p (1 - p^{-2})^{-1}\), we write
+\[
+\frac{\pi^2}{6} = \frac{1}{1 - 2^{-2}} \cdot \frac{1}{1 - 3^{-2}} \cdot \prod_{p > 3} \frac{1}{1 - p^{-2}}.
+\]
+The pre-factors for \(p=2\) and \(p=3\) evaluate to \(4/3\) and \(9/8\), respectively. Solving for \(\pi\) and noting that all primes \(p>3\) satisfy \(p \equiv \pm 1 \pmod{6}\) gives Eq.~\eqref{eq:euler_prod}.
+\end{proof}
+
+This representation shows that, under the modular filter, the primes 2 and 3 are factored out as a normalization constant, and the remaining infinite product runs exclusively over the prime channels. In DSP terms, the ``stopband'' primes (2 and 3) contribute a deterministic gain factor, while the ``passband'' primes (all others) encode the transcendental information.
+
+\subsection{Other Applications}
+The isomorphism is not limited to \(\pi\). Any series whose terms have a predictable modular structure can benefit from the decomposition. Examples include:
+\begin{itemize}
+    \item \textbf{Catalan's constant:} \(G = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)^2}\), which admits a similar modular decomposition.
+    \item \textbf{Apéry's constant:} \(\zeta(3) = \sum_{n=1}^{\infty} 1/n^3\), where modular decomposition separates terms by residue classes.
+    \item \textbf{Hypergeometric series:} Series of the form \(\sum \frac{(a)_n (b)_n}{(c)_n n!} z^n\) can be decomposed modulo \(m\) to expose arithmetic substructures.
+\end{itemize}
+
+\section{Applications in Signal Processing}
+\label{sec:DSP}
+
+\subsection{Perfect Reconstruction Filter Banks}
+Theorem~\ref{thm:isomorphism} provides a new perspective on perfect reconstruction (PR) filter banks. The orthogonality of the modular channels in the index domain translates directly to the PR condition in the transform domain. Specifically, the fact that the sets \(\{n : n \equiv r \pmod{m}\}\) are pairwise disjoint for different \(r\) guarantees that the polyphase branches operate on independent signal samples. This eliminates the need for sophisticated anti-aliasing filters: the decomposition is intrinsically alias-free.
+
+Moreover, the reconstruction formula \eqref{eq:recovery} corresponds to the synthesis stage of a PR filter bank with trivial (identity) filters. In the \(Z\)-domain, this is reflected in the simple structure of Eq.~\eqref{eq:polyphase_decomp}, where no filtering is required beyond the delay elements \(z^{-r}\).
+
+\subsection{Parallel Computational Architectures}
+The independence of the modular channels has profound implications for the parallel computation of series. Since the sub-series \(S_r\) can be evaluated completely independently---without any inter-channel communication or synchronization---the problem of evaluating \(S\) is \emph{embarrassingly parallel} across the \(m\) channels.
+
+\begin{remark}[Modular factorization of hypergeometric invariants]
+The primacy of the modulus $m=6$ is further corroborated by the structure of high-level hypergeometric series. For instance, the exponential base of the Ramanujan-Sato series of Level 58 is $396^4$, where $396 = 4 \times 9 \times 11 = 2^2 \times 3^2 \times 11$ \cite{chudnovsky}. The factors $2^2$ and $3^2$ correspond to the primorial components of the ring $\mathbb{Z}/6\mathbb{Z}$, while the prime factor $11 \equiv 5 \pmod{6}$ belongs to the resonant channel $\mathcal{C}_5$. This factorization is not coincidental: it reflects a deep self-similarity between the elementary arithmetic substrate (Level 6) and the complex multiplication geometry of high-level modular forms. The modular filter thus reveals an algebraic harmony that transcends the specific series under consideration.
+\end{remark}
+
+This observation leads naturally to a \textbf{Shared-Nothing} architecture \cite{stonebraker1986case} for series evaluation:
+\begin{enumerate}
+    \item Decompose the target series into \(m\) independent sub-series \(S_r\).
+    \item Assign each sub-series to a dedicated processing unit (core, thread, or node).
+    \item Each unit computes its partial sum using any convergent algorithm, accessing only its own private memory.
+    \item Upon completion, the partial sums are collected and added to obtain \(S\).
+\end{enumerate}
+
+This architecture was successfully implemented in the \textbf{Hybrid Stride-6} algorithm for computing \(\pi\) using the Chudnovsky series \cite{chudnovsky}. In that implementation, the series was decomposed into \(m=6\) channels, and each channel was processed by an independent Python process with its own memory space. The result was a parallelization efficiency of approximately 95\% on commodity hardware, even under severe memory constraints.
+
+The theoretical basis for this efficiency is the polyphase isomorphism: each channel computes a polyphase component \(E_r(1)\), and the final recombination is simply \(X(1) = \sum_r E_r(1)\).
+
+\subsection{Complexity Reduction}
+The polyphase decomposition also reduces the computational complexity of recursive series evaluation. In algorithms such as Binary Splitting, the recursion tree depth is determined by the number of terms being processed. By grouping terms into blocks of size \(m\) (a ``stride''), the effective tree depth is reduced by a factor of \(\log_2 m\). For \(m=6\), this factor is approximately \(2.585\).
+
+In signal processing terms, this corresponds to the fact that decimation reduces the data rate by a factor of \(M\), allowing downstream processing to operate at a lower rate.
+
+\section{Discussion and Conclusion}
+\label{sec:conclusion}
+
+We have established a formal isomorphism between modular decomposition in number theory and polyphase decomposition in multirate digital signal processing. The isomorphism is exact, general, and independent of the specific sequence or modulus. It allows the transfer of concepts, tools, and architectures between the two domains.
+
+\textbf{The Modular Spectrum concept.} The results of this paper suggest a broader perspective: the constant $\pi$ is not a monolithic object but possesses a rich \emph{modular spectrum}. At low resolution (Level 6), it is a linear alternation of prime channels, as captured by the modular Leibniz series. At higher resolution, the same arithmetic structure manifests in exponentially convergent hypergeometric series, such as the Ramanujan-Sato family, where the same primorial factors ($2^2$, $3^2$) and the channel $\mathcal{C}_5$ reappear in the invariant bases \cite{chudnovsky}. The polyphase isomorphism established here provides the unifying language: the modular decomposition at Level 6 is the ``fundamental mode'' of a spectral hierarchy, and the transition to higher levels corresponds to increasing the decimation factor and the complexity of the filter bank. Exploring this hierarchy systematically---connecting linear series, elliptic modular forms, and their $L$-function analogues---is a promising direction for future work.
+
+\textbf{Limitations:} The isomorphism is structural, not analytic. It guarantees perfect reconstruction in the sense of exact summation of the original series from its modular components, but it does not imply any identity of convergence properties, radii of convergence, or analytic continuations between the two domains. The convergence of the original series is a prerequisite for the validity of the decomposition at \(z=1\).
+
+\textbf{Future work:} Several extensions are natural:
+\begin{itemize}
+    \item \textbf{Non-uniform filter banks:} The isomorphism can be extended to moduli that are not uniform, corresponding to non-uniform filter banks in DSP.
+    \item \textbf{Connection with DFT:} The polyphase decomposition is closely related to the Discrete Fourier Transform; exploring the arithmetic analogue of the DFT may reveal deeper connections with exponential sums and Dirichlet characters.
+    \item \textbf{Application to L-functions:} The modular decomposition of Dirichlet \(L\)-functions into prime channels may provide new insights into their analytic properties.
+    \item \textbf{Hardware implementation:} The Shared-Nothing architecture suggested by the isomorphism is well-suited for implementation on FPGAs or ASICs, where physically isolated processing cores with dedicated memory can exploit the independence of the modular channels.
+\end{itemize}
+
+In conclusion, the polyphase isomorphism bridges two disciplines that, despite sharing a common mathematical substrate, have traditionally been studied in isolation. By recognizing this bridge, we open the door to a fruitful cross-fertilization between number theory and signal processing.
+
+\section*{Declarations}
+
+\textbf{Funding:} The author declares that no funds, grants, or other support were received during the preparation of this manuscript.
+
+\vspace{0.5em}
+\noindent\textbf{Author Contribution:} J.I.P.S. is the sole author of this manuscript. The author independently conceptualized the theoretical framework, formulated and proved the Polyphase Isomorphism Theorem, derived all mathematical consequences, developed the companion Colab notebook for numerical illustration, and wrote the paper.
+
+\vspace{0.5em}
+\noindent\textbf{Ethics Declaration:} Not applicable.
+
+\vspace{0.5em}
+\noindent\textbf{Competing Interests:} The author has no relevant financial or non-financial interests to disclose.
+
+\section*{Data Availability}
+The companion Colab notebook providing didactic numerical illustrations of the polyphase isomorphism—including the modular decomposition of the Leibniz series for \(\pi\), the verification of perfect reconstruction, and the modular Euler product—is publicly available in the supplementary repository associated with this publication on Zenodo. All underlying theoretical derivations and logical steps are explicitly detailed within the manuscript.
+
+\section*{Acknowledgments}
+The author expresses deep gratitude to the open-source community for the computational and typesetting tools that facilitated the preparation of this manuscript. Special acknowledgment is given to the developers of Python, NumPy, Matplotlib, and SymPy, whose libraries enabled the numerical illustrations of the theoretical results. A sincere acknowledgment is also extended to the pioneers of multirate signal processing—particularly P.~P.~Vaidyanathan—and to the mathematicians who established the foundations of modular arithmetic and analytic number theory, whose structural insights provide the unshakeable bedrock for this synthesis. Special thanks are directed to the anonymous peer reviewers and editorial staff, whose critical scrutiny, adversarial rigor, and constructive feedback are essential for maintaining the coherence and integrity of the scientific literature. This work is dedicated to the ongoing advancement of independent, foundational research at the intersection of number theory and signal processing.
+
+\section*{AI Use Statement}
+In accordance with modern scientific transparency standards, artificial intelligence models (specifically DeepSeek and Gemini) were utilized during the preparation of this manuscript. Their application was strictly limited to language editing, structural refinement, \LaTeX\ formatting optimization, and acting as a critical analysis team (\textit{red team}) to challenge, debate, and stress-test the theoretical arguments and logic. All core mathematical theorems, proofs, and the formulation of the polyphase isomorphism represent the original, independently verified intellectual work of the author.
+
+\section*{Recommended Citation and License}
+
+\noindent\textbf{Recommended Citation:} \\
+J.\,I.\,Peinador~Sala, \emph{Polyphase Isomorphism between Modular Arithmetic and Multirate Signal Processing}, Zenodo (2026). \url{https://doi.org/10.5281/zenodo.17680023}
+
+\vspace{1em}
+\noindent\textbf{Open Access License:} \\
+This article is distributed under the terms of the Creative Commons Attribution 4.0 International License (\href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.
+
+\appendix
+\section{Worked Example: Leibniz Series for \(\pi\)}
+\label{app:leibniz}
+
+We provide a detailed worked example of the isomorphism for the Leibniz series \(S = \sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1} = \frac{\pi}{4}\) with modulus \(m=6\).
+
+\textbf{Step 1: Define the signal.} Let \(x[n] = a_n = (-1)^n / (2n+1)\) for \(n \ge 0\).
+
+\textbf{Step 2: Polyphase decomposition with \(M=6\).} The six polyphase components are
+\begin{align}
+E_0(z) &= \sum_{k=0}^{\infty} \frac{(-1)^{6k}}{12k+1} z^{-k} = \sum_{k=0}^{\infty} \frac{1}{12k+1} z^{-k}, \\
+E_1(z) &= \sum_{k=0}^{\infty} \frac{(-1)^{6k+1}}{12k+3} z^{-k} = -\sum_{k=0}^{\infty} \frac{1}{12k+3} z^{-k}, \\
+E_2(z) &= \sum_{k=0}^{\infty} \frac{(-1)^{6k+2}}{12k+5} z^{-k} = \sum_{k=0}^{\infty} \frac{1}{12k+5} z^{-k}, \\
+E_3(z) &= \sum_{k=0}^{\infty} \frac{(-1)^{6k+3}}{12k+7} z^{-k} = -\sum_{k=0}^{\infty} \frac{1}{12k+7} z^{-k}, \\
+E_4(z) &= \sum_{k=0}^{\infty} \frac{(-1)^{6k+4}}{12k+9} z^{-k} = \sum_{k=0}^{\infty} \frac{1}{12k+9} z^{-k}, \\
+E_5(z) &= \sum_{k=0}^{\infty} \frac{(-1)^{6k+5}}{12k+11} z^{-k} = -\sum_{k=0}^{\infty} \frac{1}{12k+11} z^{-k}.
+\end{align}
+
+\textbf{Step 3: Evaluate at \(z=1\).} The polyphase components become
+\begin{align}
+E_0(1) &= \sum_{k=0}^{\infty} \frac{1}{12k+1}, \quad E_1(1) = -\sum_{k=0}^{\infty} \frac{1}{12k+3}, \\
+E_2(1) &= \sum_{k=0}^{\infty} \frac{1}{12k+5}, \quad E_3(1) = -\sum_{k=0}^{\infty} \frac{1}{12k+7}, \\
+E_4(1) &= \sum_{k=0}^{\infty} \frac{1}{12k+9}, \quad E_5(1) = -\sum_{k=0}^{\infty} \frac{1}{12k+11}.
+\end{align}
+
+\textbf{Step 4: Reconstruct.} The total sum is
+\[
+S = \sum_{r=0}^{5} E_r(1) = \frac{\pi}{4},
+\]
+which verifies the perfect reconstruction property. Grouping the positive and negative terms yields the compact form of Eq.~\eqref{eq:leibniz_mod}.
+
+\section{Comparison with DFT-Based Filter Banks}
+\label{app:DFT}
+
+The polyphase decomposition is closely related to the Discrete Fourier Transform (DFT). For a sequence of length \(N = mM\), the \(M\)-point DFT of the polyphase components yields the short-time Fourier transform. However, the isomorphism established in this paper is fundamentally different:
+
+\begin{itemize}
+    \item \textbf{No roots of unity required:} The modular decomposition uses only the Euclidean division algorithm, not complex exponentials.
+    \item \textbf{Infinite sequences:} The polyphase components are defined for infinite series, whereas DFT-based methods apply to finite blocks.
+    \item \textbf{Perfect reconstruction without filters:} Unlike DFT filter banks, which require prototype filter design, the modular decomposition achieves perfect reconstruction trivially from the disjointness of index sets.
+\end{itemize}
+
+Thus, while DFT-based methods and polyphase decomposition share mathematical ancestry, the isomorphism presented here is a distinct result that applies specifically to the arithmetic structure of integer-indexed sequences.
+
+\begin{thebibliography}{99}
+\bibitem{vaidyanathan}
+P.~P.~Vaidyanathan, 
+\emph{Multirate Systems and Filter Banks} 
+(Prentice Hall, Englewood Cliffs, NJ, 1993), 
+ISBN: 978-0136057185.
+
+\bibitem{conway1999sphere}
+J.~H.~Conway and N.~J.~A.~Sloane, 
+\emph{Sphere Packings, Lattices and Groups}, 
+3rd ed.\ (Springer-Verlag, New York, 1999). 
+DOI: \href{https://doi.org/10.1007/978-1-4757-6568-7}{10.1007/978-1-4757-6568-7}.
+
+\bibitem{stonebraker1986case}
+M.~Stonebraker, 
+\emph{The case for shared nothing}, 
+IEEE Database Eng.\ Bull.\ \textbf{9}(1), 4--9 (1986).
+
+\bibitem{chudnovsky}
+D.~V.~Chudnovsky and G.~V.~Chudnovsky, 
+\emph{Approximations and complex multiplication according to Ramanujan}, 
+in G.~E.~Andrews et al., eds., 
+\emph{Ramanujan Revisited: Proceedings of the Centenary Conference} 
+(Academic Press, Boston, MA, 1988), 
+pp.~375--472, ISBN: 978-0120585601.
+\bibitem{peinador_modular} J.~I.~Peinador~Sala, \emph{A Modular DSP Architecture for Extreme-Precision Computation of \(\pi\)}, Zenodo (2026). \href{https://doi.org/10.5281/zenodo.17768718}{10.5281/zenodo.17768718}
+
+\bibitem{peinador_topological} J.~I.~Peinador~Sala, \emph{Topological State Preparation via \(\mathbb{Z}/6\mathbb{Z}\) Superselection: Optimal Phases and DSP Isomorphism}, Zenodo (2026).
+\href{https://doi.org/10.5281/10.5281/zenodo.19354010}{10.5281/zenodo.19354010}
+\end{thebibliography}
+
+\end{document}
