@@ -137,7 +137,7 @@ All code has been designed to be fully auditable and reproducible.
 **Cloud Execution:**
 You can replicate the modular decomposition, perfect reconstruction verification, and Euler product convergence directly in Google Colab:
 
-[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter)](https://colab.research.google.com/github/NachoPeinador/Polyphase-Isomorphism-Modular-DSP/blob/main/Notebooks/Polyphase_Isomorphism_between_Modular_Arithmeticipynb.ipynb)
+[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter)](https://colab.research.google.com/github/NachoPeinador/Polyphase-Isomorphism-Modular-DSP/blob/main/Notebooks/Polyphase_Isomorphism_between_Modular_Arithmetic.ipynb)
 
 ---
 
@@ -160,7 +160,7 @@ If you use this work, code, or methodology in your research, please cite:
 ```bibtex
 @misc{peinador2026polyphase,
   author = {Peinador Sala, José Ignacio},
-  title = {Polyphase Isomorphism between Modular Arithmetic and Multirate Signal Processing},
+  title = {Polyphase isomorphism between modular arithmetic and multirate digital signal processing: With formal verification in Lean 4 and computational validation},
   year = {2026},
   publisher = {Zenodo},
   doi = {10.5281/zenodo.17680023},
