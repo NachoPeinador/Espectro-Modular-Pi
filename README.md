@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-blueviolet.svg?style=for-the-badge)](https://creativecommons.org/licenses/by/4.0/)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Jupyter](https://img.shields.io/badge/Notebook-Experiment-F37626.svg?style=for-the-badge&logo=Jupyter&logoColor=white)](https://colab.research.google.com/github/NachoPeinador/Polyphase-Isomorphism-Modular-DSP/blob/main/Notebooks/Polyphase_Isomorphism_between_Modular_Arithmeticipynb.ipynb)
+[![Jupyter](https://img.shields.io/badge/Notebook-Experiment-F37626.svg?style=for-the-badge&logo=Jupyter&logoColor=white)](https://colab.research.google.com/github/NachoPeinador/Polyphase-Isomorphism-Modular-DSP/blob/main/Notebooks/Polyphase_Isomorphism_between_Modular_Arithmetic.ipynb)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17680023-333333.svg?style=for-the-badge&logo=zenodo&logoColor=white)](https://doi.org/10.5281/zenodo.17680023)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0008--1822--3452-A6CE39.svg?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0008-1822-3452)
 [![Paper](https://img.shields.io/badge/Paper-Read_PDF-B31B1B?style=for-the-badge&logo=latex&logoColor=white)](https://github.com/NachoPeinador/Polyphase-Isomorphism-Modular-DSP/blob/main/Paper/Polyphase_Isomorphism_between_Modular_Arithmetic.pdf)
