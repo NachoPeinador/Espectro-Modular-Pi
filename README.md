@@ -116,17 +116,16 @@ The Colab notebook verifies the isomorphism numerically on the Leibniz series. T
 
 ## 🧩 Structural Unification: Reformulating Classical Series
 
-The modular paradigm applies not only to $\pi$ but to any constant defined by an integer-indexed series, revealing hidden symmetries and enabling new parallelization strategies.
+The modular paradigm operates as a universal structural framework. It applies not only to $\pi$ but to any mathematical constant defined by an integer-indexed series, revealing hidden symmetries and enabling new parallelization strategies through downsampled sequences.
 
-| Concept | Classical Formula | Modular Reformulation |
+| Mathematical Concept | Classical Formulation | Modular Polyphase Reformulation ($m=6$) |
 | :--- | :--- | :--- |
-| **Leibniz** | $\frac{\pi}{4} = \sum_{k=0}^{\infty} \frac{(-1)^k}{2k+1}$ | $\pi = 3 \sum (-1)^k \left( \frac{1}{6k+1} + \frac{1}{6k+5} \right)$ |
-| **Catalan** | $G = \sum_{k=0}^{\infty} \frac{(-1)^k}{(2k+1)^2}$ | Decomposition over $\mathcal{C}_1 \oplus \mathcal{C}_5$ |
-| **Apéry** | $\zeta(3) = \sum_{n=1}^{\infty} \frac{1}{n^3}$ | Separate sums over prime channels |
-| **Hypergeometric** | $\sum \frac{(a)_n(b)_n}{(c)_n n!} z^n$ | Polyphase decimation by $m$ |
+| **Leibniz Constant ($\pi$)** | $$\frac{\pi}{4} = \sum_{k=0}^{\infty} \frac{(-1)^k}{2k+1}$$|$$\pi = 3 \sum_{k=0}^{\infty} (-1)^k \left( \frac{1}{6k+1} + \frac{1}{6k+5} \right)$$ |
+| **Catalan Constant ($G$)** | $$G = \sum_{k=0}^{\infty} \frac{(-1)^k}{(2k+1)^2}$$|$$\sum_{r \in \{1,5\}} S_r - S_3 \quad \text{(Symmetric Prime Channels)}$$ |
+| **Apéry Constant ($\zeta(3)$)** | $$\zeta(3) = \sum_{n=1}^{\infty} \frac{1}{n^3}$$|$$\sum_{r=1}^{6} \sum_{k=0}^{\infty} \frac{1}{(6k+r)^3} \quad \text{(Decimated Sub-series)}$$ |
+| **Hypergeometric Functions** | $$\mathcal{F}(z) = \sum_{n=0}^{\infty} \frac{(a)_n (b)_n}{(c)_n n!} z^n$$|$$\mathcal{F}(z) = \sum_{r=0}^{m-1} z^r E_r(z^m) \quad \text{(Polyphase Reconstruction)}$$ |
 
-> **💡 Computational Implication:** The decomposition allows decoupling the calculation into $m$ independent threads (one per modular channel) with zero data dependencies—ideal for GPU/FPGA implementations.
-
+> **💡 Computational Implication:** In the hypergeometric case, $E_r(z) = \sum_{k=0}^{\infty} a_{mk+r}z^k$ represents the exact downsampled polyphase filter component from DSP. This algebraic splitting allows decoupling a monolithic calculation into $m$ completely independent computing threads with zero data dependencies—rendering the framework ideal for massively parallel GPU, FPGA, or Shared-Nothing cluster implementations.
 ---
 
 ## 📂 Repository Structure
