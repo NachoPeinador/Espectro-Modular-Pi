@@ -126,18 +126,46 @@ Polyphase-Isomorphism-Modular-DSP/
 
 ---
 
-## 💻 Reproducibility
+## 💻 Reproducibility & Verification Pipeline
 
-All code has been designed to be fully auditable and reproducible.
+All code, algebraic proofs, and numerical experiments have been designed to be fully open, auditable, and reproducible. The verification pipeline is decoupled into two independent environments inside the `Notebooks/` directory.
 
-**Requirements:**
-* Python 3.10+
-* `numpy`, `matplotlib`, `sympy`
+### 1. Formal Verification Environment (Lean 4)
+This environment executes the mechanized, interactive formal proofs of the isomorphism's algebraic foundations under the Lean 4 kernel, ensuring mathematical certainty and zero human error.
 
-**Cloud Execution:**
-You can replicate the modular decomposition, perfect reconstruction verification, and Euler product convergence directly in Google Colab:
+* **Notebook:** `Formal_Verification_LEAN_4_Polyphase_Isomorphism.ipynb`
+* **Core Certifications:** Modular Involution, Unit Group Isomorphism $(\mathbb{Z}/6\mathbb{Z})^{\times} \cong \mathbb{Z}_2$, Anti-Unitary Phase Symmetry ($\Delta\phi = \pi$), and the Polyphase Perfect Reconstruction identity.
+* **Requirements:** Lean 4 (`elan` version manager) and `Mathlib` (revision `fabf563`).
 
-[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter)](https://colab.research.google.com/github/NachoPeinador/Polyphase-Isomorphism-Modular-DSP/blob/main/Notebooks/Polyphase_Isomorphism_between_Modular_Arithmetic.ipynb)
+[![Open In Lean 4 Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/Formal_Verification_LEAN_4_Polyphase_Isomorphism.ipynb)
+
+---
+
+### 2. Computational Validation Environment (Python)
+This environment executes the empirical verification of the isomorphism, executing the modular channel splitting, evaluating convergence behaviors, and plotting the spectral properties of the sequences.
+
+* **Notebook:** `Computational_Validation_Polyphase_Isomorphism.ipynb`
+* **Core Experiments:** 1. **Perfect Reconstruction:** Verification of zero cross-channel energy leakage down to machine precision ($10^{-14}$).
+  2. **Leibniz Representation:** Decimation and synthesis of the alternating Leibniz series over active resonant channels ($\mathcal{C}_1 \oplus \mathcal{C}_5$).
+  3. **Euler Product Expansion:** Convergence verification of the modular prime-bound Euler product.
+* **Requirements:** Python 3.10+, `numpy`, `matplotlib`, `sympy`.
+
+[![Open In Python Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NachoPeinador/Espectro-Modular-Pi/blob/main/Notebooks/Computational_Validation_Polyphase_Isomorphism.ipynb)
+
+---
+
+### 🛠️ Local Execution Setup
+
+If you prefer to clone the repository and run the pipeline locally instead of using the cloud interactive instances, execute the following commands:
+
+```bash
+# Clone the repository
+git clone [https://github.com/NachoPeinador/Espectro-Modular-Pi.git](https://github.com/NachoPeinador/Espectro-Modular-Pi.git)
+cd Espectro-Modular-Pi
+
+# Install Python dependencies for the computational validation
+pip install numpy matplotlib sympy jupyter
+```
 
 ---
 
