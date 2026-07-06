@@ -30,67 +30,76 @@
 
 ## 🎯 TL;DR — The Essentials
 
-> **What is this?** A formal proof that modular decomposition of integer-indexed series is isomorphic to polyphase decomposition in DSP.
+> **What is this?** A formal mathematical proof and mechanized verification establishing that the modular decomposition of integer-indexed series in number theory is structurally isomorphic to polyphase decomposition (decimation and filter banks) in Digital Signal Processing (DSP).
 
-* **The Theorem:** The projection of a series $\sum a_n$ onto congruence classes modulo $m$ is mathematically identical to the decimation of the signal $x[n] = a_n$ by factor $M = m$.
-* **The Consequence:** Techniques from number theory (Euler products, modular representations of constants) transfer directly to filter bank design, and tools from DSP (perfect reconstruction, noble identities, multirate identities) apply to the evaluation of infinite series.
-* **The Validation:** A fully reproducible Colab notebook illustrating the isomorphism on the Leibniz series for $\pi$, the modular Euler product, and the perfect reconstruction property.
-* **The Result:** A peer-reviewed *paper* and an executable *notebook* bridging two disciplines that have developed independently for decades.
+* **The Theorem:** The projection of an infinite series $\sum a_n$ onto congruence classes modulo $m$ is mathematically identical to the multirate decimation of a discrete signal $x[n] = a_n$ by a factor $M = m$ evaluated at the Z-transform boundary ($z = 1$).
+* **The Verification:** Certified axiomatically by the **Lean 4 kernel** (guaranteeing zero logical errors) and validated numerically via Python to machine precision ($10^{-14}$).
+* **The Consequence:** Techniques from number theory (Euler products, modular representations of constants) transfer directly to optimal filter bank design, while engineering tools from DSP (perfect reconstruction, noble identities) apply directly to the accelerated evaluation of arithmetic series.
+* **The Status:** An AMS-class research manuscript currently **Under Review** at *Mathematics of Computation*, backed by an open-access dual-validation pipeline.
 
 ---
 
 ## 🌌 Overview
 
-This project presents the theoretical framework and computational validation of the article **"Polyphase Isomorphism between Modular Arithmetic and Multirate Signal Processing"**.
+This repository presents the theoretical framework, mechanized proofs, and computational validation of the article **"Polyphase Isomorphism between Modular Arithmetic and Multirate Signal Processing"**.
 
-Two classical disciplines—the theory of numbers and digital signal processing—deal with sequences indexed by integers. In number theory, one studies infinite series $\sum a_n$ and decomposes them by congruence classes modulo $m$. In DSP, one decomposes discrete-time signals into *polyphase components* by decimating with factor $M$. This work proves that these two operations are **formally identical**.
+Two classical disciplines—number theory and digital signal processing—deal extensively with sequences indexed by integers. In number theory, infinite series $\sum a_n$ are studied by decomposing them into congruence classes modulo $m$. In DSP, discrete-time signals are swept into parallel channels known as *polyphase components* via decimation by a factor $M$. This work proves that these two core operations are **formally identical**.
 
 ### 🧩 The Thesis: One Isomorphism, Two Domains
 
-We establish that the modular projection $S_r = \sum_k a_{mk+r}$ and the polyphase component $E_r(z) = \sum_k a_{mk+r} z^{-k}$ evaluated at $z=1$ are exact mathematical counterparts. The isomorphism guarantees perfect reconstruction in both domains and enables the transfer of tools across disciplines.
+We establish that the modular projection $S_r = \sum_k a_{mk+r}$ and the polyphase component $E_r(z) = \sum_k a_{mk+r} z^{-k}$ evaluated at $z=1$ are exact structural counterparts. This isomorphism guarantees **perfect reconstruction** (zero information loss) across both domains and provides a rigorous algebraic pipeline to transfer analytic tools between abstract mathematics and computational engineering.
 
 ```mermaid
 graph TD
-    A[Polyphase Isomorphism Theorem] --> B(Number Theory)
-    A --> C(Signal Processing)
+    A[Polyphase Isomorphism Theorem] -->|Mechanized Rigor| L[Lean 4 Formal Verification]
+    A -->|Numerical Veracity| P[Python Computational Validation]
     
-    B --> B1[Modular representation of π]
-    B --> B2[Modular Euler products]
-    B --> B3[Hilbert space of prime residues]
+    A --> B(Number Theory Applications)
+    A --> C(Signal Processing Applications)
     
-    C --> C1[Perfect reconstruction filter banks]
-    C --> C2[Shared-Nothing parallel architectures]
-    C --> C3[Complexity reduction via decimation]
+    B --> B1[Modular Representation of π]
+    B --> B2[Modular Euler Products]
+    B --> B3[Hilbert Space of Prime Residues]
+    
+    C --> C1[Perfect Reconstruction Filter Banks]
+    C --> C2[Shared-Nothing Parallel Architectures]
+    C --> C3[Complexity Reduction via Decimation]
 ```
 
 ---
 
 ## 🚀 Key Scientific Contributions
+ 
+### 1. The Polyphase Isomorphism Theorem
+We formally prove that, for any absolutely convergent series $\{a_n\}$ and any modulus $m \ge 2$, the modular decomposition into residue classes and the polyphase decomposition with a decimation factor $M=m$ are isomorphic:
 
-### 1. The Polyphase Isomorphism Theorem (Section 3)
+$$S_r = E_r(1), \qquad r = 0, \dots, m-1$$
 
-We formally prove that, for any absolutely convergent series $\{a_n\}$ and any modulus $m \ge 2$, the modular decomposition into residue classes and the polyphase decomposition with decimation factor $M=m$ are isomorphic:
+The structural orthogonality of the channels in the index domain guarantees perfect reconstruction without aliasing, leakage, or numerical cross-talk.
 
-$$ S_r = E_r(1), \qquad r = 0, \dots, m-1 $$
+### 2. Mechanized Formal Verification (Lean 4)
+The mathematical foundations of the isomorphism are fully formalized and verified within the Lean 4 proof assistant using `Mathlib`. The kernel strictly certifies:
+* **Modular Involution Duality:** Proof of the chiral symmetries in $\mathbb{Z}/6\mathbb{Z}$ (e.g., $5 \times 5 \equiv 1 \pmod 6$).
+* **Unit Group Isomorphism:** Mechanical proof that $(\mathbb{Z}/6\mathbb{Z})^{\times} \cong \mathbb{Z}_2$, isolating the active prime channels.
+* **Anti-Unitary Phase Symmetry:** Proof of the analytical phase offset $\Delta\phi = \pi$ between resonant branches.
+* **Perfect Reconstruction:** Proof that parallel synthesis results in the exact destructive interference of sterile subbands.
 
-The orthogonality of the channels in the index domain guarantees perfect reconstruction without aliasing.
+### 3. The Hilbert Space of Prime Residues
+For the special case of modulus $m=6$, we show that the resonant channels ($r=1,5$) form a closed Hilbert space $\mathcal{V}_6$ spanned by the orthonormal basis $\{\ket{1}, \ket{5}\}$. The classical Leibniz series for $\pi$ is reinterpreted as a geometric projection onto this space, exposing its internal arithmetic structure.
+ 
+ ### 4. Cross-Disciplinary Applications
 
-### 2. The Hilbert Space of Prime Residues (Section 2)
-
-For the special case $m=6$, the resonant channels ($r=1,5$) form a Hilbert space $\mathcal{V}_6$ spanned by the orthonormal basis $\{\ket{1}, \ket{5}\}$. The Leibniz series for $\pi$ is interpreted as a projection onto this space, revealing its internal arithmetic structure.
-
-### 3. Applications in Number Theory (Section 4)
-
-- **Modular Leibniz series:** $\pi = 3\sum_k (-1)^k \left(\frac{1}{6k+1} + \frac{1}{6k+5}\right)$
-- **Modular Euler product:** $\pi = \sqrt{9 \cdot \prod_{p>3,\ p \equiv \pm 1 \pmod{6}} \frac{p^2}{p^2-1}}$
-- The isomorphism applies to any series with predictable modular structure.
-
-### 4. Applications in Signal Processing (Section 5)
-
-- **Perfect reconstruction:** The disjointness of modular channels guarantees alias-free filter banks.
-- **Shared-Nothing architecture:** Each polyphase component can be processed independently, enabling embarrassingly parallel computation.
-- **Complexity reduction:** Decimation by $m$ reduces recursion tree depth by $\log_2 m$.
-
+ #### 🔬 Number Theory
+ * **Modular Leibniz series:**
+  $$\pi = 3\sum_{k=0}^{\infty} (-1)^k \left(\frac{1}{6k+1} + \frac{1}{6k+5}\right)$$
+ * **Modular Euler product:**
+  $$\pi = \sqrt{9 \cdot \prod_{p>3, \ p \equiv \pm 1 \pmod{6}} \frac{p^2}{p^2-1}}$$
+ 
+ #### ⚡ Signal Processing & Parallel Computing
+ * **Perfect Reconstruction Filter Banks:** The disjointness of modular residues translates directly into alias-free, orthogonal subband filters.
+ * **Shared-Nothing Architectures:** Bypasses the Memory Wall. Decomposing calculations into $m$ independent channels allows parallel execution with zero inter-thread data dependencies.
+ * **Tree Compression:** Decimation by a factor of $m$ reduces the effective recursion depth of hypergeometric series evaluation by $\log_2 m$.
+   
 ---
 
 ## 📊 Visual Validation: Perfect Reconstruction
@@ -123,12 +132,13 @@ The modular paradigm applies not only to $\pi$ but to any constant defined by an
 ## 📂 Repository Structure
 
 ```text
-Polyphase-Isomorphism-Modular-DSP/
-├── 📄 Paper/                             # Scientific manuscript (LaTeX/PDF)
-│   └── Polyphase_Isomorphism.pdf
-├── 📓 Notebooks/                         # Experimental Validation
-│   └── Polyphase_Isomorphism.ipynb       <-- COMPANION NOTEBOOK
-├── 🖼️ Images/                            # Generated figures
+Espectro-Modular-Pi/
+├── 📄 Paper/                                           # Scientific manuscript (LaTeX/PDF)
+│   └── AMS_Polyphase Isomorphism between Modular Arithmetic and Multirate Digital Signal Processing.pdf
+├── 📓 Notebooks/                                       # Dual Validation Pipeline
+│   ├── Formal_Verification_LEAN_4_Polyphase_Isomorphism.ipynb   <-- LEAN 4 VERIFICATION KERNEL
+│   └── Computational_Validation_Polyphase_Isomorphism.ipynb    <-- PYTHON COMPUTATIONAL VALIDATION
+├── 🖼️ Images/                                          # Generated figures & analytical plots
 │   └── convergence_modular.png
 └── 📜 README.md
 ```
