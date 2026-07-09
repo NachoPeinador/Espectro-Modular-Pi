@@ -20,14 +20,6 @@
 
 ---
 
-> 🌌 **El Universo Aritmético / The Arithmetic Universe** >
-
-> 🇬🇧 *This research is part of the theoretical framework of **The Arithmetic Universe**, the theory which postulates that fundamental reality is not hidden in infinite chaos, but in the elegant and humble architecture of integers.* > 🔗 **[Discover the central repository, the interactive notebooks, and the Lean 4 validation here](https://github.com/NachoPeinador/EL_UNIVERSO_ARITMETICO)**.
->
-> 🇪🇸 *Esta investigación forma parte del marco teórico de **El Universo Aritmético**, la teoría que postula que la realidad fundamental no se esconde en el caos infinito, sino en la elegante y humilde arquitectura de los números enteros.* > 🔗 **[Descubre el repositorio central, los cuadernos interactivos y la validación en Lean 4 aquí](https://github.com/NachoPeinador/EL_UNIVERSO_ARITMETICO)**.
-
----
-
 ## 🎯 TL;DR — The Essentials
 
 > **What is this?** A formal mathematical proof and mechanized verification establishing that the modular decomposition of integer-indexed series in number theory is structurally isomorphic to polyphase decomposition (decimation and filter banks) in Digital Signal Processing (DSP).
@@ -236,4 +228,10 @@ If you value this effort:
 * Theoretical Foundation Paper ID: SEMJ-S-26-00195
 * Parallel Architecture Companion Paper ID: SEMJ-S-26-00196
 
+---
 
+> 🌌 **El Universo Aritmético / The Arithmetic Universe** >
+
+> 🇬🇧 *This research is part of the theoretical framework of **The Arithmetic Universe**, the theory which postulates that fundamental reality is not hidden in infinite chaos, but in the elegant and humble architecture of integers.* > 🔗 **[Discover the central repository, the interactive notebooks, and the Lean 4 validation here](https://github.com/NachoPeinador/EL_UNIVERSO_ARITMETICO)**.
+>
+> 🇪🇸 *Esta investigación forma parte del marco teórico de **El Universo Aritmético**, la teoría que postula que la realidad fundamental no se esconde en el caos infinito, sino en la elegante y humilde arquitectura de los números enteros.* > 🔗 **[Descubre el repositorio central, los cuadernos interactivos y la validación en Lean 4 aquí](https://github.com/NachoPeinador/EL_UNIVERSO_ARITMETICO)**.
