@@ -12,10 +12,6 @@
 
 ---
 
-> 📝 **Manuscript Status Notice** > The theoretical manuscript and its mechanized proofs are currently **Under Review** at the American Mathematical Society (AMS) journal ***Mathematics of Computation*** (Submitted: July 2026).
-
----
-
 > **"An exact mathematical bridge between the arithmetic of integers and the filter banks of digital signal processing."**
 
 ---
