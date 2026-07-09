@@ -229,7 +229,11 @@ If you value this effort:
 **Author:** José Ignacio Peinador Sala
 
 **Contact:** [joseignacio.peinador@gmail.com](mailto:joseignacio.peinador@gmail.com)
-```
 
 ---
+
+📝 Manuscript Status: This work has been submitted to SeMA Journal (Springer) for publication consideration.
+* Theoretical Foundation Paper ID: SEMJ-S-26-00195
+* Parallel Architecture Companion Paper ID: SEMJ-S-26-00196
+
 
