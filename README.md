@@ -133,7 +133,7 @@ The modular paradigm operates as a universal structural framework. It applies no
 ```text
 Espectro-Modular-Pi/
 ├── 📄 Paper/                                           # Scientific manuscript (LaTeX/PDF)
-│   └── AMS_Polyphase Isomorphism between Modular Arithmetic and Multirate Digital Signal Processing.pdf
+│   └── Polyphase_Isomorphism_Modular_Arithmetic_MSP.pdf
 ├── 📓 Notebooks/                                       # Dual Validation Pipeline
 │   ├── Formal_Verification_LEAN_4_Polyphase_Isomorphism.ipynb   <-- LEAN 4 VERIFICATION KERNEL
 │   └── Computational_Validation_Polyphase_Isomorphism.ipynb    <-- PYTHON COMPUTATIONAL VALIDATION
